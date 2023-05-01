@@ -38,9 +38,11 @@ const mobileMenuList = document.querySelectorAll('.mobile__menu-item')
 const moonAndBurger = document.getElementById('header-buttons')
 
 // if tab on burgerBtn then  mobile menu open 
-burgerBtn.addEventListener('click', () => {
+burgerBtn.addEventListener('click', (event) => {
+    event.preventDefault();
     mobileMenu.classList.add('mobile__menu-active')
     moonAndBurger.classList.add('header__buttons-hide')
+    body.classList.add('no-scroll');
     // body.classList.add('body__blur')
 })
 
@@ -49,6 +51,7 @@ burgerBtn.addEventListener('click', () => {
 closeMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('mobile__menu-active')
     moonAndBurger.classList.remove('header__buttons-hide')
+    body.classList.remove('no-scroll');
 })
 
 
@@ -56,4 +59,52 @@ closeMenuBtn.addEventListener('click', () => {
 mobileMenuList.forEach(e => e.addEventListener('click', () => {
     mobileMenu.classList.remove('mobile__menu-active')
     moonAndBurger.classList.remove('header__buttons-hide')
+    body.classList.remove('no-scroll');
 }))
+
+
+
+
+// for blur when the user scrolls through the site
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('#header');
+    const scrollPosition = window.pageYOffset;
+  
+    if (scrollPosition > 100) { 
+      header.classList.add('header--blur');
+    } else {
+      header.classList.remove('header--blur');
+    }
+});
+
+
+
+
+
+/* ================  SECTION IMPORTANT INFO =================== */
+const infoList = document.querySelector('.important__info__list');
+const infoItems = infoList.querySelectorAll('.important__info__list-item');
+let currentItem = 0;
+
+// for change information   
+function changeInfo() {
+  infoItems[currentItem].classList.remove('showing');
+  currentItem = (currentItem + 1) % infoItems.length;
+  infoItems[currentItem].classList.add('showing');
+}
+
+setInterval(changeInfo, 3000);
+
+
+
+
+
+const burgerMenu = document.getElementById('burger-menu');
+
+burgerMenu.addEventListener('click', () => {
+  body.classList.add('no-scroll');
+});
+
+
+
+

@@ -9,9 +9,9 @@
     right: -500px;
     top: 0;
     z-index: 2;
-    /* background-color: var(--body-background-color); */
-    background-color: transparent;
-    padding-top: 22px;
+    background-color: var(--body-background-color);
+    /* background-color: transparent; */
+    padding-top: 10px;
     padding-left: 35px;
     padding-right: 22px;
     border-left: 2px solid var(--black-color);
