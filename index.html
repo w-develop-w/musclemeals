@@ -23,20 +23,20 @@
     <!--==================== STYLES ====================-->
 	<link rel="stylesheet" href="assets/css/index.css">
 </head>
-<body>
+<body id="body">
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <div class="container">
             <div class="header__flex-items">
                 <a href="#" class="header-logo">
-                    <img src="assets/icons/mm.png" alt="Logo">
+                    <img class="header-img" src="assets/icons/mm.png" alt="Logo">
                 </a>
 
-                <div class="header__buttons"> 
-                    <a href="#" class="theme__button" id="theme-button" onclick="return false;">
+                <div class="header__buttons" id="header-buttons"> 
+                    <a href="#" class="theme__button" id="theme-button">
                         <i id="theme-icon" class="theme__icon ri-moon-line"></i>
                     </a>
-                    <a href="#" class="burger__menu" id="burger-menu" onclick="return false;">
+                    <a href="#" class="burger__menu" id="burger-menu">
                         <i class="burger__menu__icon ri-menu-fill"></i>
                     </a>
                 </div>
@@ -44,10 +44,52 @@
         </div>    
     </header>
 
+    <div class="mobile__menu" id="mobile-menu">
+        <div class="mobile__menu-content">
+            <ul class="mobile__menu-list">
+                <a href="#header">
+                    <li class="mobile__menu-item">Home</li>
+                </a>
+
+                <a href="#">
+                    <li class="mobile__menu-item">Poteins</li>
+                </a>
+
+                <a href="#">
+                    <li class="mobile__menu-item">Fat burners</li>
+                </a>
+
+                <a href="#">
+                    <li class="mobile__menu-item">Gainers</li>
+                </a>
+
+                <a href="#">
+                    <li class="mobile__menu-item">Vitamins for joints</li>
+                </a>
+
+                <a href="#">
+                    <li class="mobile__menu-item">Amino acids</li>
+                </a>
+
+                <a href="#">
+                    <li class="mobile__menu-item">Creatine</li>
+                </a>
+
+                <a href="#">
+                    <li class="mobile__menu-item">Contact</li>
+                </a>
+            </ul>
+
+            <a href="#" id="mobile-close-btn" onclick="return false;">
+                <i class="ri-close-line mobile__menu__close-btn"></i>
+            </a>
+        </div>
+    </div>
 
 
 
-    
+
+
     <!--========== SCROLL UP ==========-->
     <a href="" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-s-line"></i>    

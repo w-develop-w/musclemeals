@@ -1,5 +1,5 @@
 .header {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -9,23 +9,30 @@
     align-items: center;
 }
 .header-logo img{
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
+    z-index: 3;
 }
+
 .header__buttons {
     display: flex;
     gap: 10px;
 }
-.theme__button {
-}
+
 .theme__icon {
-    font-size: 45px;
-}
-.burger__menu {
-    font-size: 45px;
-}
-.burger__menu__icon {
-}
-.ri-menu-fill {
+    font-size: 35px;
 }
 
+.burger__menu {
+    display: none;
+    font-size: 35px;
+}
+
+.burger__menu-active {
+    display: flex;
+    font-size: 35px;
+}
+
+.header__buttons-hide {
+    display: none;
+}
