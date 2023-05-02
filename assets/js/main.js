@@ -1,32 +1,44 @@
 /*=============== SHOW SCROLL UP ===============*/
-const scrollUp = () =>{
-	const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
 
+const scrollUp = () => {
+    const scrollUp = document.getElementById('scroll-up');
+    
+    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll');
+}
+
+window.addEventListener('scroll', scrollUp);
+
+
+
+const refreshLink = document.getElementById('header-logo');
+
+refreshLink.addEventListener('click', (event) => {
+  event.preventDefault(); 
+  window.location.reload();
+});
 
 
 // if 1024 then hide the burger button
 const mediaQuery = window.matchMedia('(min-width: 1024px)');
 const burgerBtn = document.getElementById('burger-menu')
 
-function burgerHide() {
+function handleMediaQueryChange(mediaQuery) {
     if(mediaQuery.matches) {
-        burgerBtn.classList.remove('burger__menu-active')
 
-        // if user open mobile menu and skreen does more than 1024 then mobile menu will close
-        mobileMenu.classList.remove('mobile__menu-active')
+        burgerBtn.classList.remove('burger__menu-active')
+        body.classList.remove('no-scroll');
+
+ 
         moonAndBurger.classList.remove('header__buttons-hide')
     } else {
         burgerBtn.classList.add('burger__menu-active')
     }
 }
 
-setInterval(burgerHide, 10) 
-
+// setInterval(burgerHide, 10) 
+mediaQuery.addListener(handleMediaQueryChange);
+handleMediaQueryChange(mediaQuery);
 
 
 
@@ -36,19 +48,25 @@ const body = document.getElementById('body')
 const closeMenuBtn = document.getElementById('mobile-close-btn')
 const mobileMenuList = document.querySelectorAll('.mobile__menu-item')
 const moonAndBurger = document.getElementById('header-buttons')
+const scrollUpBtn = document.getElementById('scroll-up')
+const header = document.getElementById('header')
 
 // if tab on burgerBtn then  mobile menu open 
 burgerBtn.addEventListener('click', (event) => {
+    // body.classList.add('body__blur')
+    header.classList.add('header-blur')
+    scrollUpBtn.classList.add('scrollup-hide')
     event.preventDefault();
     mobileMenu.classList.add('mobile__menu-active')
     moonAndBurger.classList.add('header__buttons-hide')
     body.classList.add('no-scroll');
-    // body.classList.add('body__blur')
 })
 
 
 // if tab on closeMenuBtn then  mobile menu close 
 closeMenuBtn.addEventListener('click', () => {
+    header.classList.remove('header-blur')
+    scrollUpBtn.classList.remove('scrollup-hide')
     mobileMenu.classList.remove('mobile__menu-active')
     moonAndBurger.classList.remove('header__buttons-hide')
     body.classList.remove('no-scroll');
@@ -57,25 +75,13 @@ closeMenuBtn.addEventListener('click', () => {
 
 // if tab on item of list then  mobile menu close 
 mobileMenuList.forEach(e => e.addEventListener('click', () => {
+    header.classList.remove('header-blur')
+    scrollUpBtn.classList.remove('scrollup-hide')
     mobileMenu.classList.remove('mobile__menu-active')
     moonAndBurger.classList.remove('header__buttons-hide')
     body.classList.remove('no-scroll');
 }))
 
-
-
-
-// for blur when the user scrolls through the site
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('#header');
-    const scrollPosition = window.pageYOffset;
-  
-    if (scrollPosition > 100) { 
-      header.classList.add('header--blur');
-    } else {
-      header.classList.remove('header--blur');
-    }
-});
 
 
 
@@ -98,13 +104,21 @@ setInterval(changeInfo, 3000);
 
 
 
-
+// to block the scroll
 const burgerMenu = document.getElementById('burger-menu');
 
 burgerMenu.addEventListener('click', () => {
   body.classList.add('no-scroll');
 });
 
+
+
+// for reload page 
+// const headerLogo = document.getElementById('header-logo')
+
+// headerLogo.addEventListener('click', () => {
+//     location.reload();
+// })
 
 
 
