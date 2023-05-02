@@ -1,3 +1,4 @@
+const body = document.getElementById('body')
 /*=============== SHOW SCROLL UP ===============*/
 
 const scrollUp = () => {
@@ -10,7 +11,7 @@ const scrollUp = () => {
 window.addEventListener('scroll', scrollUp);
 
 
-
+// Reload 
 const refreshLink = document.getElementById('header-logo');
 
 refreshLink.addEventListener('click', (event) => {
@@ -20,23 +21,19 @@ refreshLink.addEventListener('click', (event) => {
 
 
 // if 1024 then hide the burger button
-const mediaQuery = window.matchMedia('(min-width: 1024px)');
+const mediaQuery = window.matchMedia('(min-width: 768px)');
 const burgerBtn = document.getElementById('burger-menu')
 
 function handleMediaQueryChange(mediaQuery) {
     if(mediaQuery.matches) {
-
         burgerBtn.classList.remove('burger__menu-active')
-        body.classList.remove('no-scroll');
-
- 
+        body.classList.remove('no-scroll'); 
         moonAndBurger.classList.remove('header__buttons-hide')
     } else {
         burgerBtn.classList.add('burger__menu-active')
     }
 }
-
-// setInterval(burgerHide, 10) 
+ 
 mediaQuery.addListener(handleMediaQueryChange);
 handleMediaQueryChange(mediaQuery);
 
@@ -44,7 +41,6 @@ handleMediaQueryChange(mediaQuery);
 
 /* ===============  MOBILE MENU ================= */
 const mobileMenu = document.getElementById('mobile-menu') 
-const body = document.getElementById('body')
 const closeMenuBtn = document.getElementById('mobile-close-btn')
 const mobileMenuList = document.querySelectorAll('.mobile__menu-item')
 const moonAndBurger = document.getElementById('header-buttons')
@@ -53,8 +49,7 @@ const header = document.getElementById('header')
 
 // if tab on burgerBtn then  mobile menu open 
 burgerBtn.addEventListener('click', (event) => {
-    // body.classList.add('body__blur')
-    header.classList.add('header-blur')
+    // header.classList.add('header-blur')
     scrollUpBtn.classList.add('scrollup-hide')
     event.preventDefault();
     mobileMenu.classList.add('mobile__menu-active')
@@ -65,7 +60,6 @@ burgerBtn.addEventListener('click', (event) => {
 
 // if tab on closeMenuBtn then  mobile menu close 
 closeMenuBtn.addEventListener('click', () => {
-    header.classList.remove('header-blur')
     scrollUpBtn.classList.remove('scrollup-hide')
     mobileMenu.classList.remove('mobile__menu-active')
     moonAndBurger.classList.remove('header__buttons-hide')
@@ -75,7 +69,6 @@ closeMenuBtn.addEventListener('click', () => {
 
 // if tab on item of list then  mobile menu close 
 mobileMenuList.forEach(e => e.addEventListener('click', () => {
-    header.classList.remove('header-blur')
     scrollUpBtn.classList.remove('scrollup-hide')
     mobileMenu.classList.remove('mobile__menu-active')
     moonAndBurger.classList.remove('header__buttons-hide')
@@ -113,12 +106,16 @@ burgerMenu.addEventListener('click', () => {
 
 
 
-// for reload page 
-// const headerLogo = document.getElementById('header-logo')
-
-// headerLogo.addEventListener('click', () => {
-//     location.reload();
-// })
-
-
+// Filters
+const proteinFilter = document.getElementById("protein");
+proteinFilter.addEventListener("click", function() {
+    const filtersListItems = document.querySelectorAll(".filters__list-item");
+    filtersListItems.forEach(function(item) {
+        if (!item.classList.contains("protein")) {
+      item.style.display = "none";
+    } else {
+      item.style.display = "flex";
+    }
+  });
+});
 

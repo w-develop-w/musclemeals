@@ -7,27 +7,12 @@
 
 html {
 	scroll-behavior: smooth; /* for a smooth rise of the scroll  */
-	/* height: 100%; */
 }
-
-/* @keyframes fade-in {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-} */
 
 body {
 	background-color: var(--body-background-color);
-	/* height: 100%; */
     font-family: var(--body-font);
 
-}
-
-main {
-	/* flex: 1; */
 }
 
 h1, h2, h3, h4 {
@@ -85,10 +70,6 @@ body.dark-theme {
 .mobile__menu-active + *:not(.mobile-menu) {
 	filter: blur(7px);
 	transition: 0.6s;
-}
-.header-blur {
-	filter: blur(7px);
-	transition: 0.9s;
 }
 
 
