@@ -1,4 +1,5 @@
 const body = document.getElementById('body')
+const moonAndBurger = document.getElementById('header-buttons')
 /*=============== SHOW SCROLL UP ===============*/
 
 const scrollUp = () => {
@@ -43,7 +44,6 @@ handleMediaQueryChange(mediaQuery);
 const mobileMenu = document.getElementById('mobile-menu') 
 const closeMenuBtn = document.getElementById('mobile-close-btn')
 const mobileMenuList = document.querySelectorAll('.mobile__menu-item')
-const moonAndBurger = document.getElementById('header-buttons')
 const scrollUpBtn = document.getElementById('scroll-up')
 const header = document.getElementById('header')
 
@@ -108,14 +108,16 @@ burgerMenu.addEventListener('click', () => {
 
 // Filters
 const proteinFilter = document.getElementById("protein");
+const fatBurners = document.getElementById("fat-burners");
+
 proteinFilter.addEventListener("click", function() {
     const filtersListItems = document.querySelectorAll(".filters__list-item");
     filtersListItems.forEach(function(item) {
-        if (!item.classList.contains("protein")) {
-      item.style.display = "none";
-    } else {
-      item.style.display = "flex";
-    }
+        if (!item.classList.contains("protein") && !item.classList.contains("filter__static")) {
+            item.style.display = "none";
+        } else {
+            item.style.display = "flex";
+        }
   });
 });
 
