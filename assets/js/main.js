@@ -107,7 +107,7 @@ burgerMenu.addEventListener('click', () => {
 
 
 // Filters
-// const filtersItems = document.querySelectorAll('.filters__list-item')
+const filtersItems = document.querySelectorAll('.filters__list-item')
 const filterLinks = document.querySelectorAll('.filters__link')
 const protein = document.querySelectorAll('.protein')
 const fatBurners = document.querySelectorAll('fat__burners')
@@ -116,17 +116,39 @@ const fatBurners = document.querySelectorAll('fat__burners')
 
 filterLinks.forEach(category => {
     category.addEventListener('click', (event) => {
+
         if (event.target.classList.contains("protein__btn")) {
-            protein.forEach(el => {
-                el.classList.toggle('filters__protein-hide');
+            filtersItems.forEach(el => {
+                if(!el.classList.contains('filter__static') && !el.classList.contains('protein')) {
+                    el.classList.add('filters__protein-hide');
+                }
+                else {
+                    el.classList.remove('filters__protein-hide');
+                }
             });
         } 
 
-        // if (event.target.classList.contains("fat__burners")) {
-        //     .forEach(el => {
-        //         el.classList.remove('filters__burners-hide');
-        //     });
-        // } 
+        if (event.target.classList.contains("fat__burners__btn")) {
+            filtersItems.forEach(el => {
+                if(!el.classList.contains('filter__static') && !el.classList.contains('fat__burners')) {
+                    el.classList.add('filters__protein-hide');
+                }
+                else {
+                    el.classList.remove('filters__protein-hide');
+                }
+            });
+        }
+
+        if (event.target.classList.contains("gainers__btn")) {
+            filtersItems.forEach(el => {
+                if(!el.classList.contains('filter__static') && !el.classList.contains('gainers')) {
+                    el.classList.add('filters__protein-hide');
+                }
+                else {
+                    el.classList.remove('filters__protein-hide');
+                }
+            });
+        } 
     });
 });
 
