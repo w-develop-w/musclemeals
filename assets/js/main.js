@@ -107,17 +107,26 @@ burgerMenu.addEventListener('click', () => {
 
 
 // Filters
-const proteinFilter = document.getElementById("protein");
-const fatBurners = document.getElementById("fat-burners");
+// const filtersItems = document.querySelectorAll('.filters__list-item')
+const filterLinks = document.querySelectorAll('.filters__link')
+const protein = document.querySelectorAll('.protein')
+const fatBurners = document.querySelectorAll('fat__burners')
 
-proteinFilter.addEventListener("click", function() {
-    const filtersListItems = document.querySelectorAll(".filters__list-item");
-    filtersListItems.forEach(function(item) {
-        if (!item.classList.contains("protein") && !item.classList.contains("filter__static")) {
-            item.style.display = "none";
-        } else {
-            item.style.display = "flex";
-        }
-  });
+
+
+filterLinks.forEach(category => {
+    category.addEventListener('click', (event) => {
+        if (event.target.classList.contains("protein__btn")) {
+            protein.forEach(el => {
+                el.classList.toggle('filters__protein-hide');
+            });
+        } 
+
+        // if (event.target.classList.contains("fat__burners")) {
+        //     .forEach(el => {
+        //         el.classList.remove('filters__burners-hide');
+        //     });
+        // } 
+    });
 });
 
