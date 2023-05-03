@@ -119,36 +119,75 @@ filterLinks.forEach(category => {
 
         if (event.target.classList.contains("protein__btn")) {
             filtersItems.forEach(el => {
-                if(!el.classList.contains('filter__static') && !el.classList.contains('protein')) {
-                    el.classList.add('filters__protein-hide');
+                if(el.classList.contains('protein')) {
+                    el.classList.remove('filters__hide');
                 }
                 else {
-                    el.classList.remove('filters__protein-hide');
+                    if(!el.classList.contains('filter__static')) {
+
+                        el.classList.add('filters__hide');
+                    }
                 }
             });
         } 
 
         if (event.target.classList.contains("fat__burners__btn")) {
             filtersItems.forEach(el => {
-                if(!el.classList.contains('filter__static') && !el.classList.contains('fat__burners')) {
-                    el.classList.add('filters__protein-hide');
+                if(el.classList.contains('fat__burners')) {
+                    el.classList.remove('filters__hide');
                 }
                 else {
-                    el.classList.remove('filters__protein-hide');
-                }
-            });
-        }
+                    if(!el.classList.contains('filter__static')) {
 
-        if (event.target.classList.contains("gainers__btn")) {
-            filtersItems.forEach(el => {
-                if(!el.classList.contains('filter__static') && !el.classList.contains('gainers')) {
-                    el.classList.add('filters__protein-hide');
-                }
-                else {
-                    el.classList.remove('filters__protein-hide');
+                        el.classList.add('filters__hide');
+                    }
                 }
             });
         } 
+
+        if (event.target.classList.contains("gainers__btn")) {
+            filtersItems.forEach(el => {
+                if(el.classList.contains('gainers')) {
+                    el.classList.remove('filters__hide');
+                }
+                else {
+                    if(!el.classList.contains('filter__static')) {
+
+                        el.classList.add('filters__hide');
+                    }
+                }
+            });
+        } 
+
+        if (event.target.classList.contains("bca__btn")) {
+            filtersItems.forEach(el => {
+                if(el.classList.contains('bca')) {
+                    el.classList.remove('filters__hide');
+                }
+                else {
+                    if(!el.classList.contains('filter__static')) {
+
+                        el.classList.add('filters__hide');
+                    }
+                }
+            });
+        } 
+
+        if (event.target.classList.contains("creatine__btn")) {
+            filtersItems.forEach(el => {
+                if(el.classList.contains('creatine')) {
+                    el.classList.remove('filters__hide');
+                }
+                else {
+                    if(!el.classList.contains('filter__static')) {
+
+                        el.classList.add('filters__hide');
+                    }
+                }
+            });
+        } 
+
+
     });
 });
 
