@@ -2,6 +2,7 @@
 const body = document.getElementById('body')
 const moonAndBurger = document.getElementById('header-buttons')
 const filtersStatic = document.querySelectorAll('.filter__static')
+const mobileMenu = document.getElementById('mobile-menu') 
 
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () => {
@@ -48,7 +49,6 @@ handleMediaQueryChange(mediaQuery);
 
 
 /* ===============  MOBILE MENU ================= */
-const mobileMenu = document.getElementById('mobile-menu') 
 const closeMenuBtn = document.getElementById('mobile-close-btn')
 const mobileMenuList = document.querySelectorAll('.mobile__menu-item')
 const scrollUpBtn = document.getElementById('scroll-up')
@@ -244,16 +244,24 @@ handleMediaQueryChange1(mediaQuery1);
 // filters by manufacturers
 const productItems = document.querySelectorAll('.all__products-item')
 
-filtersItems.addEventListener('click', (btn) => {
-    if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
-        productItems.forEach(item => {
-            if(item.classList.contains('protein') && item.classList.contains('all__max__nutrition')) {
-                item.classList.remove('header__buttons-hide')
-            }
-        })
-    }
+filtersItems.forEach(item => {
+    item.addEventListener('click', (btn) => {
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
+            productItems.forEach(el => {
+                if(el.classList.contains('protein') && el.classList.contains('all__max__nutrition')) {
+                    el.classList.remove('all__products__item-hide')
+                    // console.log('hehehe')
+                }
+                // else {
+                //     item.classList.add('header__buttons-hide')
+                // }
+            })
+        }
+    })
 })
 
+
+// фильтрация работает только нужно вешать клик не на элемент а на текст - ссылку 
 
 
 

@@ -30,3 +30,8 @@
     font-size: 18px;
     color: var(--black-color-lighter);
 }
+
+
+.all__products__item-hide {
+    display: none;
+}
