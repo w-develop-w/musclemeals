@@ -10,6 +10,7 @@
     justify-content: center;
 }
 .all__products-item {
+    display: inline-block;
     padding: 15px;
     /* border: 2px solid black; */
     box-shadow: 0 2px 8px rgba(0,0,0,.2);

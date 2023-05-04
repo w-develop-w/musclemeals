@@ -217,11 +217,6 @@ filterLinks.forEach(category => {
 
 
 
-// filters by manufacturers
-
-
-
-
 
 
 // if less 380px screen then headerTitle hide
@@ -235,6 +230,46 @@ function handleMediaQueryChange1(mediaQuery1) {
         headerTitle.classList.remove('header__buttons-hide')
     }
 }
- 
+
 mediaQuery1.addListener(handleMediaQueryChange1);
 handleMediaQueryChange1(mediaQuery1);
+
+
+
+
+
+
+
+
+// filters by manufacturers
+const productItems = document.querySelectorAll('.all__products-item')
+
+filtersItems.addEventListener('click', (btn) => {
+    if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
+        productItems.forEach(item => {
+            if(item.classList.contains('protein') && item.classList.contains('all__max__nutrition')) {
+                item.classList.remove('header__buttons-hide')
+            }
+        })
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
