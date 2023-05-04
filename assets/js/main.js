@@ -1,7 +1,9 @@
+// variables
 const body = document.getElementById('body')
 const moonAndBurger = document.getElementById('header-buttons')
-/*=============== SHOW SCROLL UP ===============*/
+const filtersStatic = document.querySelectorAll('.filter__static')
 
+/*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up');
     
@@ -30,8 +32,12 @@ function handleMediaQueryChange(mediaQuery) {
         burgerBtn.classList.remove('burger__menu-active')
         body.classList.remove('no-scroll'); 
         moonAndBurger.classList.remove('header__buttons-hide')
+        // if more than 768 then show filters by category
+        filtersStatic.forEach(el => el.classList.remove('filters__hide'))
     } else {
         burgerBtn.classList.add('burger__menu-active')
+        // if less than 768 then hide filters by category
+        filtersStatic.forEach(el => el.classList.add('filters__hide'))
     }
 }
  
@@ -78,8 +84,6 @@ mobileMenuList.forEach(e => e.addEventListener('click', () => {
 
 
 
-
-
 /* ================  SECTION IMPORTANT INFO =================== */
 const infoList = document.querySelector('.important__info__list');
 const infoItems = infoList.querySelectorAll('.important__info__list-item');
@@ -106,14 +110,15 @@ burgerMenu.addEventListener('click', () => {
 
 
 
-// Filters
+
+/* ======================   Filters   ========================*/ 
 const filtersItems = document.querySelectorAll('.filters__list-item')
 const filterLinks = document.querySelectorAll('.filters__link')
 const protein = document.querySelectorAll('.protein')
 const fatBurners = document.querySelectorAll('fat__burners')
 
 
-
+// filters by product categories
 filterLinks.forEach(category => {
     category.addEventListener('click', (event) => {
 
@@ -124,7 +129,6 @@ filterLinks.forEach(category => {
                 }
                 else {
                     if(!el.classList.contains('filter__static')) {
-
                         el.classList.add('filters__hide');
                     }
                 }
@@ -190,4 +194,8 @@ filterLinks.forEach(category => {
 
     });
 });
+
+
+
+// filters by manufacturers
 
