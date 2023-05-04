@@ -15,10 +15,16 @@
     /* border: 2px solid black; */
     box-shadow: 0 2px 8px rgba(0,0,0,.2);
     background-color: white;
+    width: 290px;
+    height: 390px;
 }
 .product-image {
     height: 250px;
     width: 250px;
+}
+
+.product-title {
+    max-width: 250px;
 }
 
 .product__price-value {

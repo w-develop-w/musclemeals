@@ -244,6 +244,7 @@ handleMediaQueryChange1(mediaQuery1);
 // filters by manufacturers
 const productItems = document.querySelectorAll('.all__products-item')
 
+
 filtersItems.forEach(item => {
     item.addEventListener('click', (btn) => {
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
@@ -260,6 +261,31 @@ filtersItems.forEach(item => {
     })
 })
 
+// РАБОТАЕТ
+
+// filterLinks.forEach(item => {
+//     item.addEventListener('click', (btn) => {
+        
+//         if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
+//             productItems.forEach(el => {
+//                 if(!el.classList.contains('protein') && !el.classList.contains('all__max__nutrition')) {
+//                     el.classList.add('all__products__item-hide')
+//                 }
+//             })
+//         }
+
+//         if(btn.target.classList.contains('protein') && btn.target.classList.contains('bio__tech__usa"')) {
+//             productItems.forEach(el => {
+//                 if(!el.classList.contains('protein') && !el.classList.contains('bio__tech__usa"')) {
+//                     el.classList.add('all__products__item-hide')
+//                 }
+//                 else {
+//                     el.classList.remove('all__products__item-hide')
+//                 }
+//             })
+//         }
+//     })
+// })
 
 // фильтрация работает только нужно вешать клик не на элемент а на текст - ссылку 
 
