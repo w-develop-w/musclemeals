@@ -34,6 +34,7 @@ function handleMediaQueryChange(mediaQuery) {
         moonAndBurger.classList.remove('header__buttons-hide')
         // if more than 768 then show filters by category
         filtersStatic.forEach(el => el.classList.remove('filters__hide'))
+        mobileMenu.classList.remove('mobile__menu-active')
     } else {
         burgerBtn.classList.add('burger__menu-active')
         // if less than 768 then hide filters by category
@@ -59,6 +60,9 @@ burgerBtn.addEventListener('click', (event) => {
     scrollUpBtn.classList.add('scrollup-hide')
     event.preventDefault();
     mobileMenu.classList.add('mobile__menu-active')
+    if(headerTitle) {
+        headerTitle.classList.add('header__buttons-hide')
+    }
     moonAndBurger.classList.add('header__buttons-hide')
     body.classList.add('no-scroll');
 })
@@ -68,6 +72,14 @@ burgerBtn.addEventListener('click', (event) => {
 closeMenuBtn.addEventListener('click', () => {
     scrollUpBtn.classList.remove('scrollup-hide')
     mobileMenu.classList.remove('mobile__menu-active')
+    // for hide or show headerTitle
+    let screenWidth = window.screen.width;
+    if(screenWidth < 380) {
+        headerTitle.classList.add('header__buttons-hide')
+    }
+    else {
+        headerTitle.classList.remove('header__buttons-hide')
+    }
     moonAndBurger.classList.remove('header__buttons-hide')
     body.classList.remove('no-scroll');
 })
@@ -77,6 +89,14 @@ closeMenuBtn.addEventListener('click', () => {
 mobileMenuList.forEach(e => e.addEventListener('click', () => {
     scrollUpBtn.classList.remove('scrollup-hide')
     mobileMenu.classList.remove('mobile__menu-active')
+    // for hide or show headerTitle
+    let screenWidth = window.screen.width;
+    if(screenWidth < 380) {
+        headerTitle.classList.add('header__buttons-hide')
+    }
+    else {
+        headerTitle.classList.remove('header__buttons-hide')
+    }
     moonAndBurger.classList.remove('header__buttons-hide')
     body.classList.remove('no-scroll');
 }))
@@ -199,3 +219,22 @@ filterLinks.forEach(category => {
 
 // filters by manufacturers
 
+
+
+
+
+
+// if less 380px screen then headerTitle hide
+const mediaQuery1 = window.matchMedia('(max-width: 380px)')
+const headerTitle = document.getElementById('header-title')
+
+function handleMediaQueryChange1(mediaQuery1) {
+    if(mediaQuery1.matches) {
+        headerTitle.classList.add('header__buttons-hide')
+    } else {
+        headerTitle.classList.remove('header__buttons-hide')
+    }
+}
+ 
+mediaQuery1.addListener(handleMediaQueryChange1);
+handleMediaQueryChange1(mediaQuery1);

@@ -17,6 +17,10 @@
     width: 50px;
 }
 
+#header-title {
+    font-size: 25px;
+}
+
 .header__buttons {
     display: flex;
     gap: 10px;
