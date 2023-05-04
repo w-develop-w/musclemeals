@@ -1,0 +1,31 @@
+.products {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.all__products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.all__products-item {
+    padding: 15px;
+    /* border: 2px solid black; */
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    background-color: white;
+}
+.product-image {
+    height: 250px;
+    width: 250px;
+}
+
+.product__price-value {
+    font-size: 20px;
+    color: var(--black-color-lighter);
+}
+
+.product__price-currency {
+    font-size: 18px;
+    color: var(--black-color-lighter);
+}
