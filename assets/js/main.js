@@ -135,6 +135,7 @@ burgerMenu.addEventListener('click', () => {
 const filtersItems = document.querySelectorAll('.filters__list-item')
 const filterLinks = document.querySelectorAll('.filters__link')
 const protein = document.querySelectorAll('.protein')
+const creatine = document.querySelectorAll('.creatine')
 const fatBurners = document.querySelectorAll('fat__burners')
 
 
@@ -163,6 +164,9 @@ filterLinks.forEach(category => {
             filtersItems.forEach(el => {
                 if(el.classList.contains('creatine')) {
                     el.classList.remove('filters__hide');
+                    creatine.forEach(el => {
+                        el.classList.remove('all__products__item-hide');
+                    })
                 }
                 else {
                     if(!el.classList.contains('filter__static')) {
