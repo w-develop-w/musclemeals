@@ -300,6 +300,50 @@ filtersItems.forEach(item => {
                 }
             })
         }
+
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('my__protein')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Myprotein')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('optium__nutrition')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('OptimunNutrition')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('scitec-nutrition')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Scitec Nutrition')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('syntrax')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Syntrax')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
     })
 })
 
