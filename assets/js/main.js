@@ -318,6 +318,28 @@ filtersItems.forEach(item => {
                 }
             })
         }
+
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('activelab')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Activelab')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('activeway__nutrition')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('ActiveWay Nutrition')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
     })
 })
 
