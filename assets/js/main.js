@@ -256,20 +256,53 @@ filtersItems.forEach(item => {
                 }
             })
         }
+
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('bio__tech__usa')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('BioTechUSA')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('bsn')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('BSN')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('dymatize-nutrition')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Dymatize Nutrition')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('kevin-levrone')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Kevin Levrone')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
     })
 })
 
-// filtersItems.forEach(item => {
-//     item.addEventListener('click', (btn) => {
-//         if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
-//             productItems.forEach(el => {
-//                 if(el.classList.contains('protein') && el.classList.contains('all__max__nutrition')) {
-//                     el.classList.remove('all__products__item-hide')
-//                 }
-//             })
-//         }
-//     })
-// })
 
 
 
