@@ -244,22 +244,67 @@ handleMediaQueryChange1(mediaQuery1);
 // filters by manufacturers
 const productItems = document.querySelectorAll('.all__products-item')
 
-
 filtersItems.forEach(item => {
     item.addEventListener('click', (btn) => {
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
             productItems.forEach(el => {
-                if(el.classList.contains('protein') && el.classList.contains('all__max__nutrition')) {
-                    el.classList.remove('all__products__item-hide')
-                    // console.log('hehehe')
+                if (!el.textContent.includes('Allmax Nutrition')) {
+                    el.classList.add('all__products__item-hide');
                 }
-                // else {
-                //     item.classList.add('header__buttons-hide')
-                // }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
             })
         }
     })
 })
+
+// filtersItems.forEach(item => {
+//     item.addEventListener('click', (btn) => {
+//         if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
+//             productItems.forEach(el => {
+//                 if(el.classList.contains('protein') && el.classList.contains('all__max__nutrition')) {
+//                     el.classList.remove('all__products__item-hide')
+//                 }
+//             })
+//         }
+//     })
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // РАБОТАЕТ
 
