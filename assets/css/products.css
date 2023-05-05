@@ -10,26 +10,34 @@
     justify-content: center;
 }
 .all__products-item {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 15px;
-    /* border: 2px solid black; */
     box-shadow: 0 2px 8px rgba(0,0,0,.2);
     background-color: white;
-    width: 290px;
-    height: 390px;
+    width: 320px;
+    height: 420px;
 }
+
 .product-image {
     height: 250px;
     width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-title {
     max-width: 250px;
+    text-align: left;
 }
 
 .product__price-value {
     font-size: 20px;
     color: var(--black-color-lighter);
+    padding-right: 215px; /* это не решение проблемы */
 }
 
 .product__price-currency {
