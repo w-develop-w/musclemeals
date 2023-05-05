@@ -146,6 +146,10 @@ filterLinks.forEach(category => {
             filtersItems.forEach(el => {
                 if(el.classList.contains('protein')) {
                     el.classList.remove('filters__hide');
+                    // when user click on button 'protein' will show all cards with class protein
+                    protein.forEach(el => {
+                    el.classList.remove('all__products__item-hide');
+                    })
                 }
                 else {
                     if(!el.classList.contains('filter__static')) {
@@ -346,8 +350,6 @@ filtersItems.forEach(item => {
         }
     })
 })
-
-
 
 
 
