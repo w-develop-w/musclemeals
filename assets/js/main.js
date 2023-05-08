@@ -134,10 +134,10 @@ burgerMenu.addEventListener('click', () => {
 /* ======================   Filters   ========================*/ 
 const filtersItems = document.querySelectorAll('.filters__list-item')
 const filterLinks = document.querySelectorAll('.filters__link')
+const allProductsItem = document.querySelectorAll('.all__products-item')
+
 const protein = document.querySelectorAll('.protein')
 const creatine = document.querySelectorAll('.creatine')
-const fatBurners = document.querySelectorAll('fat__burners')
-
 
 // filters by product categories
 filterLinks.forEach(category => {
@@ -147,10 +147,6 @@ filterLinks.forEach(category => {
             filtersItems.forEach(el => {
                 if(el.classList.contains('protein')) {
                     el.classList.remove('filters__hide');
-                    // when user click on button 'protein' will show all cards with class protein
-                    protein.forEach(el => {
-                    el.classList.remove('all__products__item-hide');
-                    })
                 }
                 else {
                     if(!el.classList.contains('filter__static')) {
@@ -158,23 +154,39 @@ filterLinks.forEach(category => {
                     }
                 }
             });
+
+            // when user click on button 'protein' will show all cards with class creatine
+            allProductsItem.forEach(item => {
+                if(!item.classList.contains('protein')) {
+                    item.classList.add('all__products__item-hide')
+                }
+                else {
+                    item.classList.remove('all__products__item-hide')
+                }
+            })
         } 
 
         if (event.target.classList.contains("creatine__btn")) {
             filtersItems.forEach(el => {
                 if(el.classList.contains('creatine')) {
                     el.classList.remove('filters__hide');
-                    // when user click on button 'creatine' will show all cards with class creatine
-                    creatine.forEach(el => {
-                        el.classList.remove('all__products__item-hide');
-                    })
                 }
                 else {
                     if(!el.classList.contains('filter__static')) {
-
+                        
                         el.classList.add('filters__hide');
                     }
                 }
+
+                // when user click on button 'creatine' will show all cards with class creatine
+                allProductsItem.forEach(item => {
+                    if(!item.classList.contains('creatine')) {
+                        item.classList.add('all__products__item-hide')
+                    }
+                    else {
+                        item.classList.remove('all__products__item-hide')
+                    }
+                })
             });
         } 
 
@@ -189,6 +201,17 @@ filterLinks.forEach(category => {
                         el.classList.add('filters__hide');
                     }
                 }
+
+                
+                // when user click on button 'bca' will show all cards with class creatine
+                allProductsItem.forEach(item => {
+                    if(!item.classList.contains('bca')) {
+                        item.classList.add('all__products__item-hide')
+                    }
+                    else {
+                        item.classList.remove('all__products__item-hide')
+                    }
+                })
             });
         } 
     });
