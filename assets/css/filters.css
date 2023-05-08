@@ -13,6 +13,10 @@
     border: solid 2px var(--black-color);
     padding: 10px 15px;
 }
+
+.filters__list-item:hover {
+    background-color: var(--white-color-darker);
+}
 .filters__link {
     font-size: 20px;
 }
