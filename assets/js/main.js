@@ -24,7 +24,7 @@ refreshLink.addEventListener('click', (event) => {
 });
 
 
-// if 1024 then hide the burger button
+// if 768 then hide the burger button
 const mediaQuery = window.matchMedia('(min-width: 768px)');
 const burgerBtn = document.getElementById('burger-menu')
 
@@ -164,6 +164,7 @@ filterLinks.forEach(category => {
             filtersItems.forEach(el => {
                 if(el.classList.contains('creatine')) {
                     el.classList.remove('filters__hide');
+                    // when user click on button 'creatine' will show all cards with class creatine
                     creatine.forEach(el => {
                         el.classList.remove('all__products__item-hide');
                     })
@@ -224,6 +225,11 @@ const productItems = document.querySelectorAll('.all__products-item')
 
 filtersItems.forEach(item => {
     item.addEventListener('click', (btn) => {
+        
+        
+        
+        // PROTEIN FILTRATION
+        // all__max__nutrition filtration
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('Allmax Nutrition')) {
@@ -235,6 +241,7 @@ filtersItems.forEach(item => {
             })
         }
 
+        // bio__tech__usa filtration
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('bio__tech__usa')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('BioTechUSA')) {
@@ -246,6 +253,7 @@ filtersItems.forEach(item => {
             })
         }
 
+        // bsn filtration
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('bsn')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('BSN')) {
@@ -257,6 +265,7 @@ filtersItems.forEach(item => {
             })
         }
 
+        // dymatize-nutrition  filtration 
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('dymatize-nutrition')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('Dymatize Nutrition')) {
@@ -268,6 +277,7 @@ filtersItems.forEach(item => {
             })
         }
 
+        // kevin-levrone  filtration 
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('kevin-levrone')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('Kevin Levrone')) {
@@ -278,7 +288,8 @@ filtersItems.forEach(item => {
                 }
             })
         }
-
+        
+        // my__protein filtration 
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('my__protein')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('Myprotein')) {
@@ -289,7 +300,8 @@ filtersItems.forEach(item => {
                 }
             })
         }
-
+        
+        // optium__nutrition filtration 
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('optium__nutrition')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('OptimunNutrition')) {
@@ -301,6 +313,7 @@ filtersItems.forEach(item => {
             })
         }
 
+        // scitec-nutrition filtration 
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('scitec-nutrition')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('Scitec Nutrition')) {
@@ -312,6 +325,7 @@ filtersItems.forEach(item => {
             })
         }
 
+        // syntrax filtration 
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('syntrax')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('Syntrax')) {
@@ -323,6 +337,12 @@ filtersItems.forEach(item => {
             })
         }
 
+
+
+
+
+        // CREATINE FILTRATION 
+        // activelab filtration 
         if(btn.target.classList.contains('creatine') && btn.target.classList.contains('activelab')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('Activelab')) {
@@ -333,7 +353,8 @@ filtersItems.forEach(item => {
                 }
             })
         }
-
+        
+        // activeway__nutrition filtration 
         if(btn.target.classList.contains('creatine') && btn.target.classList.contains('activeway__nutrition')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('ActiveWay Nutrition')) {
@@ -344,6 +365,131 @@ filtersItems.forEach(item => {
                 }
             })
         }
+
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('biotech__usa')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('BioTech USA')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+
+        // bpi__sport filtration 
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('bpi__sport')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('BPI Sport')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+
+        // kevin__levrone filtration 
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('kevin__levrone')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Kevin  Levrone')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // olimp filtration 
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('olimp')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Olimp')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // optimum__nutrition filtration 
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('optimum__nutrition')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Optimum Nutrition')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // ostro__vit filtration 
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('ostro__vit')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('OstroVit')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // rule1 filtration 
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('rule1')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Rule1')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // scitec__nutrition filtration 
+        if(btn.target.classList.contains('creatine') && btn.target.classList.contains('scitec__nutrition')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Scitec  Nutrition')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // BCA FILTRATION 
+
+        // activ__lab filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('activ__lab')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('ActivLab')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+
+
+
     })
 })
 
