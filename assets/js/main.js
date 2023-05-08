@@ -498,10 +498,10 @@ filtersItems.forEach(item => {
 
         // BCA FILTRATION 
 
-        // activ__lab filtration 
-        if(btn.target.classList.contains('bca') && btn.target.classList.contains('activ__lab')) {
+        // active__lab filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('active__lab')) {
             productItems.forEach(el => {
-                if (!el.textContent.includes('ActivLab')) {
+                if (!el.textContent.includes('ActiveLab')) {
                     el.classList.add('all__products__item-hide');
                 }
                 else {
@@ -509,6 +509,120 @@ filtersItems.forEach(item => {
                 }
             })
         }
+
+        // blade__sport filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('blade__sport')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('BladeSport')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // bsn filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('bsn')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('BSN  ')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // ironflex filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('ironflex')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Ironflex')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // kevin__levrone filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('kevin__levrone')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Kevin   Levrone')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // olimp filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('olimp')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Olimp')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // optimum__nutrition filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('optimum__nutrition')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Optimum   Nutrition')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // scitec__nutrition filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('scitec__nutrition')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Scitec   Nutrition')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // scivation filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('scivation')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Scivation')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+        // zoomad__labs filtration 
+        if(btn.target.classList.contains('bca') && btn.target.classList.contains('zoomad__labs')) {
+            productItems.forEach(el => {
+                if (!el.textContent.includes('Zoomad Labs')) {
+                    el.classList.add('all__products__item-hide');
+                }
+                else {
+                    el.classList.remove('all__products__item-hide');
+                }
+            })
+        }
+
+
+
+
+
+        
 
 
 
