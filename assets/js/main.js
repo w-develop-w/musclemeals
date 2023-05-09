@@ -765,6 +765,72 @@ allProductsItem.forEach(item => {
         modalDescription.textContent = "BioTechUSA Crea Zero is a working creatine complex from a well-known manufacturer of sports nutrition. Supplement 4 contains the most effective forms of creatine supplemented with vitamin B6. Biotech USA Crea Zero is suitable for athletes of all skill levels.BiotechUSA Crea Zero properties: *Has a pumping effect.Increases endurance.*Improves strength characteristics.*Helps in muscle recruitment.*Increases ATP levels.*Increases the effectiveness of training.*BiotechUSA Crea Zero is a creatine matrix based on creatine monohydrate, creatine citrate and others. *The supplement does not cause side effects if you follow the instructions for use. *Biotech USA has long established itself as a high-quality and reliable manufacturer of sports goods, which has been giving us the opportunity to use 100% working supplements for more than one year."
     } 
 
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('bpi__sport')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "MICRONIZED CREATINE by BPI, highly purified creatine monohydrate from an American company. What does MICRONIZED mean? It is 100% pure creatine that has been micronized by reducing large creatine molecules.Why is micronized creatine better? *maximum degree of assimilation  *significantly stronger effect compared to standard creatine *minimization of side effects in the form of non-perception from the gastrointestinal tract *completely dissolves in any drink."
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('kevin__levrone')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "LevroCREA is a nutritional supplement designed for athletes, people who regularly play sports or have an active lifestyle, and people during periods of intense physical exertion. Each serving of the drug contains up to 7 g of creatine in four different forms: creatine hydrochloride, tri-creatine malate, creatine nitrate and creatine monohydrate. The combination of different forms of creatine allows the body to obtain the necessary creatine in different ways and at different rates, increasing the overall effectiveness of the drug.Creatine improves physical performance with consistent performance of short, high-intensity exercise. The positive effect is already noticeable when taking 3 g of creatine per day."
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('olimp')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Creatine monohydrate powder Olimp is a high quality creatine monohydrate powder. Creatine monohydrate powder Olimp is essential for high performance athletes. It provides replenishment of phosphocreatine reserves in muscles - a derivative for the synthesis of ATP - the main energy source of muscle cells.In other words, the higher the concentration of creatine in the body, the more intensively it produces ATP molecules. As a result, muscle strength and endurance increase. Creatine monohydrate powder Olimp increases the athlete's performance, you can train harder, lift more weight - this will accelerate the growth of muscle mass."
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('optimum__nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Optimum Nutrition Creatine Powder - 100% pure creatine monohydrate powder - the highest quality product. The action of the drug is to optimize the energy processes occurring in muscle tissues. Creatine promotes the accumulation of ATP, thereby increasing the body's endurance during physical activity. Optimum Nutrition Creatine Powder is pure creatine monohydrate in powder form. Does not contain various impurities or other ineffective compounds. This creatine complex is one of Optimum Nutrition's most famous and frequently purchased supplements. The main function of creatine in the body is to improve the energy characteristics of muscle cells, which inevitably leads to an increase in strength and endurance. Many amateurs and professionals cannot imagine the training process without such an additive. Its reception noticeably accelerates the receipt of results and at the same time does not have negative or other fictional effects. Creatine is actively produced by the body, but this is not enough for heavy strength training."
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('ostro__vit')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Creatine Monohydrate by Ostrovit, one of the most common forms of creatine on the market is creatine monohydrate.Creatine is a nutrient that is produced by the body and partly comes from food. Creatine is found primarily in red muscle tissue. It plays an important role in the contraction of muscle tissue, acting as an energy depot during exercise, and an increase in the supply of this substance will directly affect athletic performance."
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('rule1')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "R1 CREATINE is Rule 1's pharmaceutical grade micronized creatine monohydrate. The main goal of this product is to restore lost ATP and creatine reserves in the shortest possible time.The composition of the product is represented by 100% pure premium quality creatine monohydrate, which, due to its micronized form, is absorbed several times faster, which in turn has a positive effect on its absorption process and overall effectiveness. It is worth noting that R1 CREATINE is obtained only from animal sources, it has no taste and smell."
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('scitec__nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Crea-Bomb Scitec Nutrition is a new pure creatine sports nutrition product in a complex creatine matrix that contains 6 forms of creatine. The formula is patented by Skaitek Nutrishin and provides maximum nutrition of your muscles with creatine, as a result of which indicators of strength and muscle growth increase.The strength of Crea-Bomb Scitec Nutrition is in the variety of creatine. Its not worth arguing which creatine is more effective - its better to take them all! The Crea-Bomb formula provides 'double acting' creatine compounds, in which creatine is chemically bonded to other substances that provide added functionality and performance, not just more creatine."
+    } 
+
+
+
+
 
     
     
