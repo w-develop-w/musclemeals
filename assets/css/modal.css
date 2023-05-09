@@ -1,5 +1,5 @@
 .modal {
-    /* display: flex; */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -8,6 +8,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 30px;
+}
+
+.modal-active {
+    display: inline-block;
 }
 
 .modal-content {
@@ -31,8 +35,6 @@
 }
 
 .modal-image {
-    /* height: 250px; */
-    /* width: 250px; */
     max-width: 250px;
     height: auto;
 }

@@ -625,6 +625,24 @@ filtersItems.forEach(item => {
 
 
 
+// =========================== MODAL ============================================
+// Show modal window
+const modal = document.getElementById('modal')
+allProductsItem.forEach(item => {
+    item.addEventListener('click', (event) => {
+        if(event.target) {
+            modal.classList.add('modal-active')
+        }
+    })
+})
+
+
+// Close modal window
+const closeModal = document.getElementById('modal-close')
+
+closeModal.addEventListener('click', () => {
+    modal.classList.remove('modal-active')
+})
 
 
 
@@ -654,39 +672,6 @@ filtersItems.forEach(item => {
 
 
 
-
-
-
-
-
-
-// РАБОТАЕТ
-
-// filterLinks.forEach(item => {
-//     item.addEventListener('click', (btn) => {
-        
-//         if(btn.target.classList.contains('protein') && btn.target.classList.contains('all__max__nutrition')) {
-//             productItems.forEach(el => {
-//                 if(!el.classList.contains('protein') && !el.classList.contains('all__max__nutrition')) {
-//                     el.classList.add('all__products__item-hide')
-//                 }
-//             })
-//         }
-
-//         if(btn.target.classList.contains('protein') && btn.target.classList.contains('bio__tech__usa"')) {
-//             productItems.forEach(el => {
-//                 if(!el.classList.contains('protein') && !el.classList.contains('bio__tech__usa"')) {
-//                     el.classList.add('all__products__item-hide')
-//                 }
-//                 else {
-//                     el.classList.remove('all__products__item-hide')
-//                 }
-//             })
-//         }
-//     })
-// })
-
-// фильтрация работает только нужно вешать клик не на элемент а на текст - ссылку 
 
 
 
