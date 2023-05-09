@@ -656,16 +656,7 @@ const modalDescription = modal.querySelector('.modal__description')
 allProductsItem.forEach(item => {
   item.addEventListener('click', (event) => {
     event.preventDefault()
-    // if (event.target) {
-    //   modal.classList.add('modal-active')
-    //   let imageUrl = item.querySelector('img').src
-    //   modalImage.src = imageUrl
-      
-    //   let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-    //   modalTitle.textContent = title
-    // }
-    
-    
+  
     if (event.target && item.classList.contains('protein') && item.classList.contains('all__max__nutrition')) {
         modal.classList.add('modal-active')
         let imageUrl = item.querySelector('img').src
@@ -719,6 +710,68 @@ allProductsItem.forEach(item => {
         modalTitle.textContent = title
         modalDescription.textContent = "Myprotein Impact Whey Protein (Импакт Вей Протеин Май Протеин) – это белковая добавка на основе неденатурированного концентрата сывороточного протеина с высоким содержанием белка (82%).Наш бестселлер Impact Whey Protein® изготавливается из высококачественного концентрата сывороточного белка, и содержит более 20г белка в каждой порции. Комплексный профиль аминокислот данного продукта, с содержанием более 2гр лейцина в порции, обеспечит вас всеми незаменимыми аминокислотами (EEA). Если вы ищете протеин высочайшего качества, с исключительным соотношением качества и цены и великолепным вкусом - то это то, что вам нужно.Мы гордимся тем, что можем предложить вам протеиновые коктейли с широким ассортиментом вкусов. Вы можете выбрать классические вкусы, такие как шоколад или ваниль, а также новые вкусы, такие как тирамису, ревень с заварным кремом и лимонный чизкейк."
     }   
+
+    if (event.target && item.classList.contains('protein') && item.classList.contains('optium__nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Protein is a mixture of amino acids that make up your muscles.During exercise, muscles require high-quality protein replenishment for regeneration, recovery and growth. 100% Whey Gold Standard is exactly the protein source you need!Most people don't even realize they're not getting their daily protein intake. Gold Standard helps to compensate for this deficiency and promotes a set of lean muscle mass."
+    }   
+
+    if (event.target && item.classList.contains('protein') && item.classList.contains('scitec-nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "100% Whey Protein Professional is a high quality ultra-isolated whey protein concentrate and whey isolate.Whey protein is considered the best among all types of protein in bodybuilding, since its biological value is the highest. Whey protein has a huge amino acid composition and a very high concentration of BCAAs (isoleucine, leucine, valine) compared to other protein sources. The amino acid profile of this protein is excellent. The so-called “anabolic amino acids” (BCAA, arginine, glutamine) are also added to its composition.100% Whey Protein Professional consists of 10% microfractions of immunoglobulin protein, which supports the body's immune system."
+    }   
+
+    if (event.target && item.classList.contains('protein') && item.classList.contains('syntrax')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Problem: Plain packaging of poor quality protein, containing maltodextrin, which promotes fat loss, tastes terrible, requires a blender to dissolve the protein, and, in addition, contains only one 'fast' protein. No doubt most of these packs are cheap, but who wants to take a supplement day after day that is as inconvenient as it is useless?"
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('activelab')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Activlab Creatine Beta Alanine is a unique complex containing creatine monohydrate and beta-alanine. These two substances individually perfectly improve the athletic performance of athletes, and acting in combination, they enhance mutual influence. With this supplement, your strength and endurance will improve many times over, which will positively affect the quality of training.  Activlab Creatine Beta Alanine is a unique complex containing creatine monohydrate and beta-alanine. These two substances individually perfectly improve the athletic performance of athletes, and acting in combination, they enhance mutual influence. With this supplement, your strength and endurance will improve many times over, which will positively affect the quality of training.You can buy Activlab Creatine Beta Alanine in Kyiv at a bargain price in our online store of sports nutrition and accessories Fitness Shop. To do this, you need to add the product to the cart, and fill in several fields of the order form. If you do not have time or opportunity to fill out the form, use the quick order button. In addition, you can get an initial consultation via online chat or by phone. We deliver sports nutrition in Kyiv and throughout the country in a short time."
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('activeway__nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "ActiWay Micro Creatine is the most common form of creatine monohydrate. The purest product that has undergone a micronization process (high degree of grinding). Extra fine powder - creatine particle size is 200 mesh (= 0.074 mm). Thanks to this, creatine passes through the intestinal walls more easily, does not irritate the mucous membrane, is absorbed faster, and therefore reaches its goal faster. Natural and 100% purified product, does not contain any impurities or additives. Increases muscle activity and overall endurance of the body. One of the main obvious advantages of this product is its cost. With ActiWay Nutrition, a young company in the European market, you do not overpay for the brand, for advertising and for the name of the product."
+    } 
+
+    if (event.target && item.classList.contains('creatine') && item.classList.contains('biotech__usa')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "BioTechUSA Crea Zero is a working creatine complex from a well-known manufacturer of sports nutrition. Supplement 4 contains the most effective forms of creatine supplemented with vitamin B6. Biotech USA Crea Zero is suitable for athletes of all skill levels.BiotechUSA Crea Zero properties: *Has a pumping effect.Increases endurance.*Improves strength characteristics.*Helps in muscle recruitment.*Increases ATP levels.*Increases the effectiveness of training.*BiotechUSA Crea Zero is a creatine matrix based on creatine monohydrate, creatine citrate and others. *The supplement does not cause side effects if you follow the instructions for use. *Biotech USA has long established itself as a high-quality and reliable manufacturer of sports goods, which has been giving us the opportunity to use 100% working supplements for more than one year."
+    } 
+
+
+    
+    
+
+
+
+
 
 
   })
