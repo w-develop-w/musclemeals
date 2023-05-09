@@ -279,7 +279,7 @@ filtersItems.forEach(item => {
         // bsn filtration
         if(btn.target.classList.contains('protein') && btn.target.classList.contains('bsn')) {
             productItems.forEach(el => {
-                if (!el.textContent.includes('BSN')) {
+                if (!el.textContent.includes('BSN  Syntha')) {
                     el.classList.add('all__products__item-hide');
                 }
                 else {
@@ -289,7 +289,7 @@ filtersItems.forEach(item => {
         }
 
         // dymatize-nutrition  filtration 
-        if(btn.target.classList.contains('protein') && btn.target.classList.contains('dymatize-nutrition')) {
+        if(btn.target.classList.contains('protein') && btn.target.classList.contains('dymatize__nutrition')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('Dymatize Nutrition')) {
                     el.classList.add('all__products__item-hide');
@@ -388,7 +388,8 @@ filtersItems.forEach(item => {
                 }
             })
         }
-
+        
+        // biotech__usa filtration 
         if(btn.target.classList.contains('creatine') && btn.target.classList.contains('biotech__usa')) {
             productItems.forEach(el => {
                 if (!el.textContent.includes('BioTech USA')) {
@@ -429,7 +430,7 @@ filtersItems.forEach(item => {
         // olimp filtration 
         if(btn.target.classList.contains('creatine') && btn.target.classList.contains('olimp')) {
             productItems.forEach(el => {
-                if (!el.textContent.includes('Olimp')) {
+                if (!el.textContent.includes('Olimp   ')) {
                     el.classList.add('all__products__item-hide');
                 }
                 else {
@@ -525,7 +526,7 @@ filtersItems.forEach(item => {
         // bsn filtration 
         if(btn.target.classList.contains('bca') && btn.target.classList.contains('bsn')) {
             productItems.forEach(el => {
-                if (!el.textContent.includes('BSN  ')) {
+                if (!el.textContent.includes('BSN Amino')) {
                     el.classList.add('all__products__item-hide');
                 }
                 else {
@@ -561,7 +562,7 @@ filtersItems.forEach(item => {
         // olimp filtration 
         if(btn.target.classList.contains('bca') && btn.target.classList.contains('olimp')) {
             productItems.forEach(el => {
-                if (!el.textContent.includes('Olimp')) {
+                if (!el.textContent.includes('Olimp Xplode') && !el.textContent.includes('Olimp Mega Caps')) {
                     el.classList.add('all__products__item-hide');
                 }
                 else {
