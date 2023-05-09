@@ -1,0 +1,35 @@
+.developer {
+    margin-top: 40px;
+    width: 100%;
+}
+.developer__content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color-darker);
+}
+
+.ri-instagram-fill {
+    font-size: 40px;
+}
+
+.ri-telegram-fill {
+    font-size: 40px;
+}
+
+.ri-github-fill {
+    font-size: 40px;
+}
+
+.developer__contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 200px;
+}
+
+.developer__icon:hover {
+    color: white;
+}
