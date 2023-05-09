@@ -665,16 +665,62 @@ allProductsItem.forEach(item => {
     //   modalTitle.textContent = title
     // }
     
+    
     if (event.target && item.classList.contains('protein') && item.classList.contains('all__max__nutrition')) {
         modal.classList.add('modal-active')
         let imageUrl = item.querySelector('img').src
         modalImage.src = imageUrl
-        
         let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
         modalTitle.textContent = title
-
-      modalDescription.textContent = "Casein-FX™/HexaPro/Isoflex has the perfect combination of 100% pure micellar casein and calcium caseinate, which together provide up to 7 hours of protein digestion! Those. during a nights sleep, you are reliably protected from destructive processes (splitting of muscle tissue) and, moreover, stimulate growth and recovery speed."
+        modalDescription.textContent = "Casein-FX™/HexaPro/Isoflex has the perfect combination of 100% pure micellar casein and calcium caseinate, which together provide up to 7 hours of protein digestion! Those. during a nights sleep, you are reliably protected from destructive processes (splitting of muscle tissue) and, moreover, stimulate growth and recovery speed."
     }   
+
+    if (event.target && item.classList.contains('protein') && item.classList.contains('bio__tech__usa')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "BioTech (USA) Iso Whey Zero is a whey protein isolate from a world famous brand, maximally purified from impurities by cold microfiltration. The product is ideal for everyone who leads a healthy lifestyle and plays sports, including professional bodybuilders. Thanks to protein, anyone can increase muscle gain and minimize catabolic losses. This is possible due to the presence in the composition of an effective amino acid profile that nourishes muscle fibers and stimulates the anabolic process."
+    }   
+
+    if (event.target && item.classList.contains('protein') && item.classList.contains('bsn')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "BSN Syntha-6 Edge is an innovative protein based on 4 types of protein: milk, whey, micellar and casein. Whey protein has the highest absorption rate. The speed of its assimilation is extremely high: from 20 to 40 minutes, depending on the form (concentrate, hydrolyzate, isolate). Milk protein is more resistant to the action of enzymes and is digested in about 40-60 minutes. The longest absorption period is characterized by slow proteins: micellar casein and calcium caseinate. They complement each other favorably and as part of Syntha-6 Edge form a single matrix with a complex anabolic effect."
+    }   
+
+    if (event.target && item.classList.contains('protein') && item.classList.contains('dymatize__nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Dymatize Elite Whey - 'Star' composition. Includes a blend of fast-acting whey protein isolates, ion-exchange whey protein concentrates and peptides. This makes the product instantly digestible and giving instant results. You will feel it literally from the first workout. What else.Elite Whey is highly enriched with amino acids (the main building blocks of muscles) and has a high protein efficiency ratio (according to the Protein Efficiency Rating). The mixture contains a high percentage of glutamine. It is he who ensures the balance of muscle proteins, plays a crucial role in protein synthesis and strengthens the human immune system. This is critical during heavy workloads."
+    }   
+
+    if (event.target && item.classList.contains('protein') && item.classList.contains('kevin__levrone')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Kevin Levrone Gold Whey is a whey protein from the new gold product line from bodybuilding legend Kevin Levrone. Kevin Levrone already has several separate product lines under the names Silver Line, Black Line and Unique Line. They have already won the trust and love of their customers both in the European market and beyond. For 2020, the brand introduces an all-new series - Gold, a comprehensive collection of 11 different supplements that are distinguished by premium quality and unrivaled performance. The protein from this series surprised everyone with its extremely good tastes, perfect solubility and excellent digestibility."
+    }   
+
+    if (event.target && item.classList.contains('protein') && item.classList.contains('my__protein')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Myprotein Impact Whey Protein (Импакт Вей Протеин Май Протеин) – это белковая добавка на основе неденатурированного концентрата сывороточного протеина с высоким содержанием белка (82%).Наш бестселлер Impact Whey Protein® изготавливается из высококачественного концентрата сывороточного белка, и содержит более 20г белка в каждой порции. Комплексный профиль аминокислот данного продукта, с содержанием более 2гр лейцина в порции, обеспечит вас всеми незаменимыми аминокислотами (EEA). Если вы ищете протеин высочайшего качества, с исключительным соотношением качества и цены и великолепным вкусом - то это то, что вам нужно.Мы гордимся тем, что можем предложить вам протеиновые коктейли с широким ассортиментом вкусов. Вы можете выбрать классические вкусы, такие как шоколад или ваниль, а также новые вкусы, такие как тирамису, ревень с заварным кремом и лимонный чизкейк."
+    }   
+
+
   })
 })
 
