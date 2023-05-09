@@ -628,10 +628,14 @@ filtersItems.forEach(item => {
 // =========================== MODAL ============================================
 // Show modal window
 const modal = document.getElementById('modal')
+const modalImage = modal.querySelector('.modal-image')
+
 allProductsItem.forEach(item => {
     item.addEventListener('click', (event) => {
-        if(event.target) {
+        if (event.target) {
             modal.classList.add('modal-active')
+            let imageUrl = item.querySelector('img').src
+            modalImage.src = imageUrl
         }
     })
 })
