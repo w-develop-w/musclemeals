@@ -1,7 +1,7 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     left: 0;
     top: 0;
     width: 100%;
@@ -37,6 +37,13 @@
 .modal-image {
     max-width: 250px;
     height: auto;
+}
+
+.modal-title {
+    padding-top: 15px;
+    max-width: 250px;
+    text-align: left;
+    line-height: 30px;
 }
 
 .modal__flex {

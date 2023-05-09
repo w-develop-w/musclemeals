@@ -627,26 +627,56 @@ filtersItems.forEach(item => {
 
 // =========================== MODAL ============================================
 // Show modal window
+// const modal = document.getElementById('modal')
+// const modalImage = modal.querySelector('.modal-image')
+// let modalTitle = modal.querySelector('.product-title').textContent
+
+// allProductsItem.forEach(item => {
+//     item.addEventListener('click', (event) => {
+//         event.preventDefault()
+//         if (event.target) {
+//             modal.classList.add('modal-active')
+//             let imageUrl = item.querySelector('img').src
+//             modalImage.src = imageUrl
+
+//             let title = item.querySelector('.modal-title').textContent
+//             modalTitle.textContent = title 
+
+
+//         }
+//     })
+// })
+
+
 const modal = document.getElementById('modal')
 const modalImage = modal.querySelector('.modal-image')
+const modalTitle = modal.querySelector('.modal-title')
 
 allProductsItem.forEach(item => {
-    item.addEventListener('click', (event) => {
-        if (event.target) {
-            modal.classList.add('modal-active')
-            let imageUrl = item.querySelector('img').src
-            modalImage.src = imageUrl
-        }
-    })
+  item.addEventListener('click', (event) => {
+    event.preventDefault()
+    if (event.target) {
+      modal.classList.add('modal-active')
+      let imageUrl = item.querySelector('img').src
+      modalImage.src = imageUrl
+      
+      let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+      modalTitle.textContent = title
+    }
+  })
 })
 
 
 // Close modal window
 const closeModal = document.getElementById('modal-close')
 
-closeModal.addEventListener('click', () => {
+closeModal.addEventListener('click', (event) => {
+    event.preventDefault()
     modal.classList.remove('modal-active')
+    let titleModal = document.getElementById()
 })
+
+
 
 
 
