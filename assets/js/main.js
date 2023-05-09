@@ -651,18 +651,30 @@ filtersItems.forEach(item => {
 const modal = document.getElementById('modal')
 const modalImage = modal.querySelector('.modal-image')
 const modalTitle = modal.querySelector('.modal-title')
+const modalDescription = modal.querySelector('.modal__description')
 
 allProductsItem.forEach(item => {
   item.addEventListener('click', (event) => {
     event.preventDefault()
-    if (event.target) {
-      modal.classList.add('modal-active')
-      let imageUrl = item.querySelector('img').src
-      modalImage.src = imageUrl
+    // if (event.target) {
+    //   modal.classList.add('modal-active')
+    //   let imageUrl = item.querySelector('img').src
+    //   modalImage.src = imageUrl
       
-      let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-      modalTitle.textContent = title
-    }
+    //   let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+    //   modalTitle.textContent = title
+    // }
+    
+    if (event.target && item.classList.contains('protein') && item.classList.contains('all__max__nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+        modalTitle.textContent = title
+
+      modalDescription.textContent = "Casein-FX™/HexaPro/Isoflex has the perfect combination of 100% pure micellar casein and calcium caseinate, which together provide up to 7 hours of protein digestion! Those. during a nights sleep, you are reliably protected from destructive processes (splitting of muscle tissue) and, moreover, stimulate growth and recovery speed."
+    }   
   })
 })
 
@@ -673,7 +685,6 @@ const closeModal = document.getElementById('modal-close')
 closeModal.addEventListener('click', (event) => {
     event.preventDefault()
     modal.classList.remove('modal-active')
-    let titleModal = document.getElementById()
 })
 
 
