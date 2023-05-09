@@ -618,21 +618,13 @@ filtersItems.forEach(item => {
                 }
             })
         }
-
-
-        
-
-
-
-
-
-        
-
-
-
-
     })
 })
+
+
+
+
+
 
 
 
