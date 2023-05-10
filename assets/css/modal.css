@@ -91,7 +91,7 @@
     text-transform: uppercase;
 }
 
-.modal__close-btn {
+.modal__btn {
     border: 2px solid black;
     padding: 5px 10px;
 }

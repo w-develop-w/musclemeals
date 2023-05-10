@@ -22,6 +22,9 @@
 
     <!--==================== STYLES ====================-->
 	<link rel="stylesheet" href="assets/css/index.css">
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body id="body">
     <!--==================== HEADER ====================-->
@@ -2139,7 +2142,7 @@
                     <div class="modal__price__buy">
                         <span class="product__price-currency">25$</span>
     
-                        <a href="" class="modal__close-btn">Buy</a>
+                        <a href="#" class="modal__btn" id="modal-btn">Buy</a>
                     </div>
                 </div>
             </div>
@@ -2149,6 +2152,34 @@
             </a>
         </div>
     </div>
+
+
+    <div class="modal__order" id="modal-order">
+        <div class="modal__order-content">
+            <div class="modal__order-flex">
+                <h3 class="modal__order__flex-item modal__order-title">Ordering</h3>
+                
+                <!-- <div class="modal__order__flex-item modal__order__choice"> -->
+                <h2 class="modal__order__flex-item modal__order__choice">Your choice:   Zoomad Labs BCAA Caretaker Sleeper (405gr)</h2>                
+                    <!-- <h2 class="modal-title">Zoomad Labs BCAA Caretaker Sleeper (405gr)</h2> -->
+                <!-- </div> -->
+                
+                <div class="modal__order__flex-item modal__order-form">
+                    <form class="modal__order-form" id="form">
+                        <input class="modal__order-input" type="text" id="name" name="name" placeholder="Name" required>
+                        <input class="modal__order-input" type="text" id="surname" name="surname" placeholder="Surname" required>
+                        <input class="modal__order-input" type="tel" id="phone" name="phone" placeholder="Number" required>
+                        <input class="modal__order-input" type="email" id="email" name="email" placeholder="Email" required>
+                        <button class="modal__order-btn" id="order-btn" type="submit" class="modal__order-btn">Order</button>
+                    </form>
+                </div>
+            </div>
+
+            <a href="#" class="modal__ordfer__close modal__flex-item" id="order-close">
+                <i class="ri-close-fill"></i>
+            </a>
+        </div>
+    </div> 
 
    
     <!--========== SCROLL UP =========-->

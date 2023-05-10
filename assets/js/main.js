@@ -778,9 +778,59 @@ closeModal.addEventListener('click', (event) => {
     // scroll unlock
     body.style.overflow = 'auto'
     // scrollUp.classList.remove('scrollup-hide') 
-
-
 })
+
+
+
+
+
+
+
+// Modal Order
+const buyBtn = document.getElementById('modal-btn')
+const modalOrder = document.getElementById('modal-order')
+const closeModalOrder = document.getElementById('order-close')
+
+buyBtn.addEventListener('click', () => {
+    modal.classList.remove('modal-active')
+    modalOrder.classList.add('order-active')
+})
+
+closeModalOrder.addEventListener('click', () => {
+    modalOrder.classList.remove('order-active')
+})
+
+
+
+
+
+
+// EMAIL JS
+const contactForm = document.getElementById('form'),
+      userName = document.getElementById('name'),
+      userSurname = document.getElementById('surname'),
+      userPhone = document.getElementById('phone'),  
+      userEmail = document.getElementById('email')  
+
+const sendEmail = (e) => {
+    e.preventDefault()
+
+      // serviceID - templateID - #form - publicKey
+    emailjs.sendForm('service_7424rz9','template_97jeqds','#form','qtnoXVdXRXU5Rc5en')    
+        .then(() => {
+            userName.value = '';
+            userSurname.value = '';
+            userPhone.value = '';
+            userEmail.value = '';
+            setTimeout(() => {
+            }, 3000)
+        }, (error) => {
+            // Mail sending error
+            alert('OOPS! SOMETHING HAS FAILED...', error)  
+        })    
+} 
+
+contactForm.addEventListener('submit', sendEmail)
 
 
 

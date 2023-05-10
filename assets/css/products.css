@@ -39,6 +39,7 @@
     max-width: 250px;
     text-align: left;
     line-height: 30px;
+    /* text-transform: uppercase; */
 }
 
 .product__price-value {
