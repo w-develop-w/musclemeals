@@ -102,3 +102,18 @@
     }
 }
 
+@media screen and (max-width: 300px) {    
+    .modal-content {
+        height: 700px;
+        padding-top: 80px;
+    }
+
+    .modal__close {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        padding-right: 40px;
+        font-size: 40px;
+    }
+}
+
