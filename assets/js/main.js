@@ -635,270 +635,127 @@ allProductsItem.forEach(item => {
   item.addEventListener('click', (event) => {
     event.preventDefault()
   
+    modal.classList.add('modal-active')
+    let imageUrl = item.querySelector('img').src
+    modalImage.src = imageUrl
+    let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+    modalTitle.textContent = title
+
     if (event.target && item.classList.contains('protein') && item.classList.contains('all__max__nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Casein-FX™/HexaPro/Isoflex has the perfect combination of 100% pure micellar casein and calcium caseinate, which together provide up to 7 hours of protein digestion! Those. during a nights sleep, you are reliably protected from destructive processes (splitting of muscle tissue) and, moreover, stimulate growth and recovery speed."
     }   
 
     if (event.target && item.classList.contains('protein') && item.classList.contains('bio__tech__usa')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "BioTech (USA) Iso Whey Zero is a whey protein isolate from a world famous brand, maximally purified from impurities by cold microfiltration. The product is ideal for everyone who leads a healthy lifestyle and plays sports, including professional bodybuilders. Thanks to protein, anyone can increase muscle gain and minimize catabolic losses. This is possible due to the presence in the composition of an effective amino acid profile that nourishes muscle fibers and stimulates the anabolic process."
     }   
 
     if (event.target && item.classList.contains('protein') && item.classList.contains('bsn')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "BSN Syntha-6 Edge is an innovative protein based on 4 types of protein: milk, whey, micellar and casein. Whey protein has the highest absorption rate. The speed of its assimilation is extremely high: from 20 to 40 minutes, depending on the form (concentrate, hydrolyzate, isolate). Milk protein is more resistant to the action of enzymes and is digested in about 40-60 minutes. The longest absorption period is characterized by slow proteins: micellar casein and calcium caseinate. They complement each other favorably and as part of Syntha-6 Edge form a single matrix with a complex anabolic effect."
     }   
 
     if (event.target && item.classList.contains('protein') && item.classList.contains('dymatize__nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Dymatize Elite Whey - 'Star' composition. Includes a blend of fast-acting whey protein isolates, ion-exchange whey protein concentrates and peptides. This makes the product instantly digestible and giving instant results. You will feel it literally from the first workout. What else.Elite Whey is highly enriched with amino acids (the main building blocks of muscles) and has a high protein efficiency ratio (according to the Protein Efficiency Rating). The mixture contains a high percentage of glutamine. It is he who ensures the balance of muscle proteins, plays a crucial role in protein synthesis and strengthens the human immune system. This is critical during heavy workloads."
     }   
 
     if (event.target && item.classList.contains('protein') && item.classList.contains('kevin__levrone')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Kevin Levrone Gold Whey is a whey protein from the new gold product line from bodybuilding legend Kevin Levrone. Kevin Levrone already has several separate product lines under the names Silver Line, Black Line and Unique Line. They have already won the trust and love of their customers both in the European market and beyond. For 2020, the brand introduces an all-new series - Gold, a comprehensive collection of 11 different supplements that are distinguished by premium quality and unrivaled performance. The protein from this series surprised everyone with its extremely good tastes, perfect solubility and excellent digestibility."
     }   
 
     if (event.target && item.classList.contains('protein') && item.classList.contains('my__protein')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Myprotein Impact Whey Protein (Импакт Вей Протеин Май Протеин) – это белковая добавка на основе неденатурированного концентрата сывороточного протеина с высоким содержанием белка (82%).Наш бестселлер Impact Whey Protein® изготавливается из высококачественного концентрата сывороточного белка, и содержит более 20г белка в каждой порции. Комплексный профиль аминокислот данного продукта, с содержанием более 2гр лейцина в порции, обеспечит вас всеми незаменимыми аминокислотами (EEA). Если вы ищете протеин высочайшего качества, с исключительным соотношением качества и цены и великолепным вкусом - то это то, что вам нужно.Мы гордимся тем, что можем предложить вам протеиновые коктейли с широким ассортиментом вкусов. Вы можете выбрать классические вкусы, такие как шоколад или ваниль, а также новые вкусы, такие как тирамису, ревень с заварным кремом и лимонный чизкейк."
     }   
 
     if (event.target && item.classList.contains('protein') && item.classList.contains('optium__nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Protein is a mixture of amino acids that make up your muscles.During exercise, muscles require high-quality protein replenishment for regeneration, recovery and growth. 100% Whey Gold Standard is exactly the protein source you need!Most people don't even realize they're not getting their daily protein intake. Gold Standard helps to compensate for this deficiency and promotes a set of lean muscle mass."
     }   
 
     if (event.target && item.classList.contains('protein') && item.classList.contains('scitec-nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "100% Whey Protein Professional is a high quality ultra-isolated whey protein concentrate and whey isolate.Whey protein is considered the best among all types of protein in bodybuilding, since its biological value is the highest. Whey protein has a huge amino acid composition and a very high concentration of BCAAs (isoleucine, leucine, valine) compared to other protein sources. The amino acid profile of this protein is excellent. The so-called “anabolic amino acids” (BCAA, arginine, glutamine) are also added to its composition.100% Whey Protein Professional consists of 10% microfractions of immunoglobulin protein, which supports the body's immune system."
     }   
 
     if (event.target && item.classList.contains('protein') && item.classList.contains('syntrax')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Problem: Plain packaging of poor quality protein, containing maltodextrin, which promotes fat loss, tastes terrible, requires a blender to dissolve the protein, and, in addition, contains only one 'fast' protein. No doubt most of these packs are cheap, but who wants to take a supplement day after day that is as inconvenient as it is useless?"
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('activelab')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Activlab Creatine Beta Alanine is a unique complex containing creatine monohydrate and beta-alanine. These two substances individually perfectly improve the athletic performance of athletes, and acting in combination, they enhance mutual influence. With this supplement, your strength and endurance will improve many times over, which will positively affect the quality of training.  Activlab Creatine Beta Alanine is a unique complex containing creatine monohydrate and beta-alanine. These two substances individually perfectly improve the athletic performance of athletes, and acting in combination, they enhance mutual influence. With this supplement, your strength and endurance will improve many times over, which will positively affect the quality of training.You can buy Activlab Creatine Beta Alanine in Kyiv at a bargain price in our online store of sports nutrition and accessories Fitness Shop. To do this, you need to add the product to the cart, and fill in several fields of the order form. If you do not have time or opportunity to fill out the form, use the quick order button. In addition, you can get an initial consultation via online chat or by phone. We deliver sports nutrition in Kyiv and throughout the country in a short time."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('activeway__nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "ActiWay Micro Creatine is the most common form of creatine monohydrate. The purest product that has undergone a micronization process (high degree of grinding). Extra fine powder - creatine particle size is 200 mesh (= 0.074 mm). Thanks to this, creatine passes through the intestinal walls more easily, does not irritate the mucous membrane, is absorbed faster, and therefore reaches its goal faster. Natural and 100% purified product, does not contain any impurities or additives. Increases muscle activity and overall endurance of the body. One of the main obvious advantages of this product is its cost. With ActiWay Nutrition, a young company in the European market, you do not overpay for the brand, for advertising and for the name of the product."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('biotech__usa')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "BioTechUSA Crea Zero is a working creatine complex from a well-known manufacturer of sports nutrition. Supplement 4 contains the most effective forms of creatine supplemented with vitamin B6. Biotech USA Crea Zero is suitable for athletes of all skill levels.BiotechUSA Crea Zero properties: *Has a pumping effect.Increases endurance.*Improves strength characteristics.*Helps in muscle recruitment.*Increases ATP levels.*Increases the effectiveness of training.*BiotechUSA Crea Zero is a creatine matrix based on creatine monohydrate, creatine citrate and others. *The supplement does not cause side effects if you follow the instructions for use. *Biotech USA has long established itself as a high-quality and reliable manufacturer of sports goods, which has been giving us the opportunity to use 100% working supplements for more than one year."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('bpi__sport')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "MICRONIZED CREATINE by BPI, highly purified creatine monohydrate from an American company. What does MICRONIZED mean? It is 100% pure creatine that has been micronized by reducing large creatine molecules.Why is micronized creatine better? *maximum degree of assimilation  *significantly stronger effect compared to standard creatine *minimization of side effects in the form of non-perception from the gastrointestinal tract *completely dissolves in any drink."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('kevin__levrone')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "LevroCREA is a nutritional supplement designed for athletes, people who regularly play sports or have an active lifestyle, and people during periods of intense physical exertion. Each serving of the drug contains up to 7 g of creatine in four different forms: creatine hydrochloride, tri-creatine malate, creatine nitrate and creatine monohydrate. The combination of different forms of creatine allows the body to obtain the necessary creatine in different ways and at different rates, increasing the overall effectiveness of the drug.Creatine improves physical performance with consistent performance of short, high-intensity exercise. The positive effect is already noticeable when taking 3 g of creatine per day."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('olimp')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Creatine monohydrate powder Olimp is a high quality creatine monohydrate powder. Creatine monohydrate powder Olimp is essential for high performance athletes. It provides replenishment of phosphocreatine reserves in muscles - a derivative for the synthesis of ATP - the main energy source of muscle cells.In other words, the higher the concentration of creatine in the body, the more intensively it produces ATP molecules. As a result, muscle strength and endurance increase. Creatine monohydrate powder Olimp increases the athlete's performance, you can train harder, lift more weight - this will accelerate the growth of muscle mass."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('optimum__nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Optimum Nutrition Creatine Powder - 100% pure creatine monohydrate powder - the highest quality product. The action of the drug is to optimize the energy processes occurring in muscle tissues. Creatine promotes the accumulation of ATP, thereby increasing the body's endurance during physical activity. Optimum Nutrition Creatine Powder is pure creatine monohydrate in powder form. Does not contain various impurities or other ineffective compounds. This creatine complex is one of Optimum Nutrition's most famous and frequently purchased supplements. The main function of creatine in the body is to improve the energy characteristics of muscle cells, which inevitably leads to an increase in strength and endurance. Many amateurs and professionals cannot imagine the training process without such an additive. Its reception noticeably accelerates the receipt of results and at the same time does not have negative or other fictional effects. Creatine is actively produced by the body, but this is not enough for heavy strength training."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('ostro__vit')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "Creatine Monohydrate by Ostrovit, one of the most common forms of creatine on the market is creatine monohydrate.Creatine is a nutrient that is produced by the body and partly comes from food. Creatine is found primarily in red muscle tissue. It plays an important role in the contraction of muscle tissue, acting as an energy depot during exercise, and an increase in the supply of this substance will directly affect athletic performance."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('rule1')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
-        modalTitle.textContent = title
         modalDescription.textContent = "R1 CREATINE is Rule 1's pharmaceutical grade micronized creatine monohydrate. The main goal of this product is to restore lost ATP and creatine reserves in the shortest possible time.The composition of the product is represented by 100% pure premium quality creatine monohydrate, which, due to its micronized form, is absorbed several times faster, which in turn has a positive effect on its absorption process and overall effectiveness. It is worth noting that R1 CREATINE is obtained only from animal sources, it has no taste and smell."
     } 
 
     if (event.target && item.classList.contains('creatine') && item.classList.contains('scitec__nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "Crea-Bomb Scitec Nutrition is a new pure creatine sports nutrition product in a complex creatine matrix that contains 6 forms of creatine. The formula is patented by Skaitek Nutrishin and provides maximum nutrition of your muscles with creatine, as a result of which indicators of strength and muscle growth increase.The strength of Crea-Bomb Scitec Nutrition is in the variety of creatine. Its not worth arguing which creatine is more effective - its better to take them all! The Crea-Bomb formula provides 'double acting' creatine compounds, in which creatine is chemically bonded to other substances that provide added functionality and performance, not just more creatine."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('active__lab')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "Activlab Bcaa - Essential Branched Chain Amino Acids Enriched with Glutamine! Excellent combination of price and quality. Properties: *Protection of muscles from catabolism. *Muscle recovery during exercise. *Decrease in dormancy. *Acceleration of protein synthesis. * Improving immunity.  Mix 1 serving (10g) per amount of liquid you drink during your workout (500-1000 ml) and drink during your workout. Or you can split your pre-workout and post-workout half serving. On non-workout days, drink on an empty stomach."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('blade__sport')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "Blade Sport BCAA 2.1.1 Amino Acid Complex is a high quality and effective product designed for a wide range of users.Formulated with a clinically tested and effective dosage of L-Glutamine, which has a powerful effect on muscle development and muscle protein production.The amino acids L-leucine, L-isoleucine and L-valine contained in Blade Sport BCAA 2.1.1 have the following positive effects on the athlete's body:• protect muscles from catabolism; • stimulate protein synthesis in muscle tissues; • provide energy to perform intensive power work; • contribute to the accelerated growth of dry muscle mass; • increase strength and endurance."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('bsn')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "BSN Amino X® is a stimulant-free, BCAA formula designed to support endurance during training and aid post-workout muscle training so you can take your performance to the next level. * With a 10-gram blend of essential BCAAs and the amino acids L-Alanine, Taurine and L-Citrulline, AMINOx® will help your body recover from today's workout and prepare for tomorrow. * Offered in five refreshing flavors, AMINOx® provides you with versatile nutritional support for any type of workout.Amino acids are the building blocks of protein and therefore the building blocks of muscle mass."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('ironflex')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "In the struggle for the perfect figure, have you repeatedly come across thoughts about the benefits of BCAA supplements in combination with glutamine? IronFlex innovators too! That's why BCAA Recovery was created - a novelty that is even more effective than these two supplements when used separately. Why should you buy IronFlex BCAA Recovery? Because it is an important component of the process of building muscle mass (about 60% of total muscle mass).Branched chain amino acids (BCAAs) play a critical role accounting for about 35% of total muscle building, and glutamine has many important functions in the body - it does more than just promote protein synthesis."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('kevin__levrone')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "Levro BCAA is a complex of three essential amino acids with branched side chains, namely Leucine, Isoleucine and Valine. All of them are in this product in free form, and therefore, are completely ready for assimilation, without requiring additional digestion, unlike regular protein. This feature suggests that after taking the supplement, with an empty stomach, BCAA amino acids will begin to enter your bloodstream in 15 minutes. Another distinctive feature of Levro BCAA is the ratio of three amino acids to each other. Usually we are used to seeing a ratio of 2:1:1, but in this case we have 4:1:1."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('olimp')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "BCAA Xplode Olimp - Powdered BCAA + Glutamine. This is a very concentrated, high dosage formulation (6g BCAA + 1g glutamine per serving). This formulation is designed for serious athletes and includes the maximum dosage of BCAA in the seed. Amino acids BCAA Xplode (BCAA explod Olimp) is an absolutely legal and safe drug with a pronounced anabolic effect. It promotes the growth of lean muscle mass, quickly restores muscle tissue after training, provides you with energy before training, promotes accelerated protein synthesis in muscles, and strengthens the immune system."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('optimum__nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "Regular intake of such a complex will allow you to normalize the amino acid metabolism of the body. Our muscles actively use free BCAA molecules during strength training, and their lack can lead to severe muscle catabolism, and as a result, a lack of progress. Few people know that the synthesis of muscle fibers begins only with a sufficient amount of certain essential amino acids, in particular BCAA. Lack of appropriate foods in the diet can tremendously slow down the desired result. Alas, often athletes and athletes simply do not have the time and money to prepare and buy expensive protein foods. It is much more profitable to purchase BCAA 5000 Powder from Optimum Nutrition."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('scitec__nutrition')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "Scitec Nutrition BCAA 6400 - BCAA tablets, POWERFUL COMPLEX. This drug is characterized by high dosages (4480 mg of branched-chain amino acids BCAAs per serving), which is especially important for bodybuilding and strength sports. BCAA 6400 Scitec nutrition (BCAA 6400 Skytech nutrition) are optimally suited for rapid muscle building and recovery of skeletal muscles after training. The composition of BCAA 6400 includes 3 essential amino acids in the L form: isoleucine, leucine, valine. BCAAs are extremely important for our body. They are irreplaceable, i.e. are not produced in our body and must be supplied with food or in the form of dietary supplements."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('scivation')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "Scivation XTEND is the ultimate recovery BCAA complex. This is a powerful composition of BCAA amino acids with a pronounced anti-catabolic effect. Among its beneficial actions are the improvement of growth hormone secretion and the acceleration of protein synthesis, as well as a synergistic effect, when all components enhance each other's action. Scivation Xtend contains a 2:1:1 ratio of leucine, isoleucine, and valine, plus glutamine and citrulline malate. The latter is not directly involved in the construction of protein, but improves blood circulation to the muscles and speeds up recovery after training. It also promotes the rapid elimination of lactic acid."
     } 
 
     if (event.target && item.classList.contains('bca') && item.classList.contains('zoomad__labs')) {
-        modal.classList.add('modal-active')
-        let imageUrl = item.querySelector('img').src
-        modalImage.src = imageUrl
-        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
-        modalTitle.textContent = title
         modalDescription.textContent = "Natural food supplement in the form of a powder with the addition of a patented mixture of amino acids with a complex of active synergistic action. For many years, nutritional supplements with amino acid complexes have occupied leading positions in sports nutrition for beginner bodybuilders and athletes, as well as for experienced athletes and professional athletes. Amino acid supplements are not in vain considered one of the most powerful supplements designed to build, repair and maintain muscle."
     } 
-
-
-
-
   })
 })
 
