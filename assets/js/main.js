@@ -626,28 +626,6 @@ filtersItems.forEach(item => {
 
 
 // =========================== MODAL ============================================
-// Show modal window
-// const modal = document.getElementById('modal')
-// const modalImage = modal.querySelector('.modal-image')
-// let modalTitle = modal.querySelector('.product-title').textContent
-
-// allProductsItem.forEach(item => {
-//     item.addEventListener('click', (event) => {
-//         event.preventDefault()
-//         if (event.target) {
-//             modal.classList.add('modal-active')
-//             let imageUrl = item.querySelector('img').src
-//             modalImage.src = imageUrl
-
-//             let title = item.querySelector('.modal-title').textContent
-//             modalTitle.textContent = title 
-
-
-//         }
-//     })
-// })
-
-
 const modal = document.getElementById('modal')
 const modalImage = modal.querySelector('.modal-image')
 const modalTitle = modal.querySelector('.modal-title')
@@ -828,14 +806,95 @@ allProductsItem.forEach(item => {
         modalDescription.textContent = "Crea-Bomb Scitec Nutrition is a new pure creatine sports nutrition product in a complex creatine matrix that contains 6 forms of creatine. The formula is patented by Skaitek Nutrishin and provides maximum nutrition of your muscles with creatine, as a result of which indicators of strength and muscle growth increase.The strength of Crea-Bomb Scitec Nutrition is in the variety of creatine. Its not worth arguing which creatine is more effective - its better to take them all! The Crea-Bomb formula provides 'double acting' creatine compounds, in which creatine is chemically bonded to other substances that provide added functionality and performance, not just more creatine."
     } 
 
+    if (event.target && item.classList.contains('bca') && item.classList.contains('active__lab')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Activlab Bcaa - Essential Branched Chain Amino Acids Enriched with Glutamine! Excellent combination of price and quality. Properties: *Protection of muscles from catabolism. *Muscle recovery during exercise. *Decrease in dormancy. *Acceleration of protein synthesis. * Improving immunity.  Mix 1 serving (10g) per amount of liquid you drink during your workout (500-1000 ml) and drink during your workout. Or you can split your pre-workout and post-workout half serving. On non-workout days, drink on an empty stomach."
+    } 
 
+    if (event.target && item.classList.contains('bca') && item.classList.contains('blade__sport')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Blade Sport BCAA 2.1.1 Amino Acid Complex is a high quality and effective product designed for a wide range of users.Formulated with a clinically tested and effective dosage of L-Glutamine, which has a powerful effect on muscle development and muscle protein production.The amino acids L-leucine, L-isoleucine and L-valine contained in Blade Sport BCAA 2.1.1 have the following positive effects on the athlete's body:• protect muscles from catabolism; • stimulate protein synthesis in muscle tissues; • provide energy to perform intensive power work; • contribute to the accelerated growth of dry muscle mass; • increase strength and endurance."
+    } 
 
+    if (event.target && item.classList.contains('bca') && item.classList.contains('bsn')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "BSN Amino X® is a stimulant-free, BCAA formula designed to support endurance during training and aid post-workout muscle training so you can take your performance to the next level. * With a 10-gram blend of essential BCAAs and the amino acids L-Alanine, Taurine and L-Citrulline, AMINOx® will help your body recover from today's workout and prepare for tomorrow. * Offered in five refreshing flavors, AMINOx® provides you with versatile nutritional support for any type of workout.Amino acids are the building blocks of protein and therefore the building blocks of muscle mass."
+    } 
 
+    if (event.target && item.classList.contains('bca') && item.classList.contains('ironflex')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "In the struggle for the perfect figure, have you repeatedly come across thoughts about the benefits of BCAA supplements in combination with glutamine? IronFlex innovators too! That's why BCAA Recovery was created - a novelty that is even more effective than these two supplements when used separately. Why should you buy IronFlex BCAA Recovery? Because it is an important component of the process of building muscle mass (about 60% of total muscle mass).Branched chain amino acids (BCAAs) play a critical role accounting for about 35% of total muscle building, and glutamine has many important functions in the body - it does more than just promote protein synthesis."
+    } 
 
-    
-    
+    if (event.target && item.classList.contains('bca') && item.classList.contains('kevin__levrone')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Levro BCAA is a complex of three essential amino acids with branched side chains, namely Leucine, Isoleucine and Valine. All of them are in this product in free form, and therefore, are completely ready for assimilation, without requiring additional digestion, unlike regular protein. This feature suggests that after taking the supplement, with an empty stomach, BCAA amino acids will begin to enter your bloodstream in 15 minutes. Another distinctive feature of Levro BCAA is the ratio of three amino acids to each other. Usually we are used to seeing a ratio of 2:1:1, but in this case we have 4:1:1."
+    } 
 
+    if (event.target && item.classList.contains('bca') && item.classList.contains('olimp')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "BCAA Xplode Olimp - Powdered BCAA + Glutamine. This is a very concentrated, high dosage formulation (6g BCAA + 1g glutamine per serving). This formulation is designed for serious athletes and includes the maximum dosage of BCAA in the seed. Amino acids BCAA Xplode (BCAA explod Olimp) is an absolutely legal and safe drug with a pronounced anabolic effect. It promotes the growth of lean muscle mass, quickly restores muscle tissue after training, provides you with energy before training, promotes accelerated protein synthesis in muscles, and strengthens the immune system."
+    } 
 
+    if (event.target && item.classList.contains('bca') && item.classList.contains('optimum__nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Regular intake of such a complex will allow you to normalize the amino acid metabolism of the body. Our muscles actively use free BCAA molecules during strength training, and their lack can lead to severe muscle catabolism, and as a result, a lack of progress. Few people know that the synthesis of muscle fibers begins only with a sufficient amount of certain essential amino acids, in particular BCAA. Lack of appropriate foods in the diet can tremendously slow down the desired result. Alas, often athletes and athletes simply do not have the time and money to prepare and buy expensive protein foods. It is much more profitable to purchase BCAA 5000 Powder from Optimum Nutrition."
+    } 
+
+    if (event.target && item.classList.contains('bca') && item.classList.contains('scitec__nutrition')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Scitec Nutrition BCAA 6400 - BCAA tablets, POWERFUL COMPLEX. This drug is characterized by high dosages (4480 mg of branched-chain amino acids BCAAs per serving), which is especially important for bodybuilding and strength sports. BCAA 6400 Scitec nutrition (BCAA 6400 Skytech nutrition) are optimally suited for rapid muscle building and recovery of skeletal muscles after training. The composition of BCAA 6400 includes 3 essential amino acids in the L form: isoleucine, leucine, valine. BCAAs are extremely important for our body. They are irreplaceable, i.e. are not produced in our body and must be supplied with food or in the form of dietary supplements."
+    } 
+
+    if (event.target && item.classList.contains('bca') && item.classList.contains('scivation')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Scivation XTEND is the ultimate recovery BCAA complex. This is a powerful composition of BCAA amino acids with a pronounced anti-catabolic effect. Among its beneficial actions are the improvement of growth hormone secretion and the acceleration of protein synthesis, as well as a synergistic effect, when all components enhance each other's action. Scivation Xtend contains a 2:1:1 ratio of leucine, isoleucine, and valine, plus glutamine and citrulline malate. The latter is not directly involved in the construction of protein, but improves blood circulation to the muscles and speeds up recovery after training. It also promotes the rapid elimination of lactic acid."
+    } 
+
+    if (event.target && item.classList.contains('bca') && item.classList.contains('zoomad__labs')) {
+        modal.classList.add('modal-active')
+        let imageUrl = item.querySelector('img').src
+        modalImage.src = imageUrl
+        let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
+        modalTitle.textContent = title
+        modalDescription.textContent = "Natural food supplement in the form of a powder with the addition of a patented mixture of amino acids with a complex of active synergistic action. For many years, nutritional supplements with amino acid complexes have occupied leading positions in sports nutrition for beginner bodybuilders and athletes, as well as for experienced athletes and professional athletes. Amino acid supplements are not in vain considered one of the most powerful supplements designed to build, repair and maintain muscle."
+    } 
 
 
 
