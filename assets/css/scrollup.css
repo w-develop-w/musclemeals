@@ -3,23 +3,20 @@
     position: fixed;
     right: 1rem;
     bottom: -30%;
-    /* background-color: var(--first-color); */
     display: inline-flex;
     padding: .35rem;
-    /* color: var(--title-color-black); */
     padding: 15px;
     border-radius: 50%;
     background-color: var(--white-color);
     box-shadow: 0 2px 8px rgba(0,0,0,.2);
     font-size: 1.25rem;
-    z-index: 100;
+    /* z-index: 100; */
     transition: 1s;
 }
 
 .scrollup:hover {
     transform: translateY(-.25rem);
 }
-
 
 
 /* Show Scroll Up*/

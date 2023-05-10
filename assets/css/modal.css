@@ -8,11 +8,19 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 30px;
+    backdrop-filter: blur(15px); /* to blur everything except the modal window */
 }
 
 .modal-active {
     display: inline-block;
 }
+
+
+
+.modal-active.scrollup  {
+	display: none;
+}
+
 
 .modal-content {
     display: flex;
@@ -93,3 +101,4 @@
         flex-direction: column;
     }
 }
+
