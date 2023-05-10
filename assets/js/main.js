@@ -790,8 +790,11 @@ closeModal.addEventListener('click', (event) => {
 const buyBtn = document.getElementById('modal-btn')
 const modalOrder = document.getElementById('modal-order')
 const closeModalOrder = document.getElementById('order-close')
+const choice = document.getElementById('choice')
 
 buyBtn.addEventListener('click', () => {
+    let product = modalTitle.textContent
+    choice.value = product
     modal.classList.remove('modal-active')
     modalOrder.classList.add('order-active')
 })
@@ -818,6 +821,7 @@ const sendEmail = (e) => {
       // serviceID - templateID - #form - publicKey
     emailjs.sendForm('service_7424rz9','template_97jeqds','#form','qtnoXVdXRXU5Rc5en')    
         .then(() => {
+            choice.value = '';
             userName.value = '';
             userSurname.value = '';
             userPhone.value = '';
