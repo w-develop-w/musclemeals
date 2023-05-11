@@ -102,7 +102,7 @@ input:focus {
     border-radius: 0px;
 }
 
-.modal__ordfer__close {
+.modal__order__close {
     position: absolute;
     right: 0;
     top: 40px;
@@ -110,6 +110,25 @@ input:focus {
     font-size: 40px;
 }
 
+
+@media screen and (max-width: 450px) {
+    .modal__order-content {
+      height: 900px;
+    }
+
+    .modal__order {
+        padding: 110px 65px;
+    }
+
+    .modal__order__close {
+        position: absolute;
+        right: 0;
+        top: 120px;
+        padding-right: 60px;
+        font-size: 40px;
+    }
+    
+}
 
 
 

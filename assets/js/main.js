@@ -792,15 +792,18 @@ const modalOrder = document.getElementById('modal-order')
 const closeModalOrder = document.getElementById('order-close')
 const choice = document.getElementById('choice')
 
-buyBtn.addEventListener('click', () => {
+buyBtn.addEventListener('click', (event) => {
+    event.preventDefault()
     let product = modalTitle.textContent
     choice.value = product
     modal.classList.remove('modal-active')
     modalOrder.classList.add('order-active')
 })
 
-closeModalOrder.addEventListener('click', () => {
+closeModalOrder.addEventListener('click', (event) => {
+    event.preventDefault()
     modalOrder.classList.remove('order-active')
+    body.style.overflow = 'auto'
 })
 
 
