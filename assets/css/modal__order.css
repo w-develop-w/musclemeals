@@ -131,4 +131,32 @@ input:focus {
 }
 
 
+@media screen and (max-width: 280px) {
+    .modal__order-content {
+      height: 700px;
+    }
+
+    .modal__order-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 280px;
+        width: 100%;
+        gap: 35px;
+    }
+
+    .modal__order__close {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        padding-right: 60px;
+        font-size: 40px;
+    }
+    
+
+    .modal__order-input {
+        min-width: 240px; 
+    }    
+}
+
+
 
