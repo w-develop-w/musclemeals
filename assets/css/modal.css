@@ -26,13 +26,15 @@
     display: flex;
     background-color: #fefefe;
     margin: auto;
-    padding: 40px;
+    padding: 80px 80px;
     border: 1px solid #888;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 1024px;
+    width: 980px; /* фиксированная ширина */
+    height: 600px;
 }
 
 .modal__flex-item {
@@ -43,15 +45,17 @@
 }
 
 .modal-image {
-    max-width: 250px;
-    height: auto;
+    width: 350px;
+    height: 350px;
+    /* height: auto; */
 }
 
 .modal-title {
     padding-top: 15px;
     max-width: 250px;
     text-align: left;
-    line-height: 30px;
+    line-height: 35px;
+    font-size: 30px;
 }
 
 .modal__flex {
@@ -69,8 +73,8 @@
 .modal__close {
     position: absolute;
     right: 0;
-    top: 20px;
-    padding-right: 40px;
+    top: 40px;
+    padding-right: 60px;
     font-size: 40px;
 }
 
@@ -80,7 +84,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     overflow: auto;
-    max-height: 150px;
+    line-height: 30px;
+    max-height: 250px;
+    font-size: 25px;
 }
 
 .modal__price__buy {
@@ -93,27 +99,59 @@
 
 .modal__btn {
     border: 2px solid black;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    font-size: 20px;
 }
 
-@media screen and (max-width: 1240px) {
+.product__price-currency {
+    font-size: 25px;
+}
+
+@media screen and (max-width: 968px) {
     .modal__flex {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 300px) {    
     .modal-content {
-        height: 700px;
-        padding-top: 80px;
+        width: 480px;
+        height: 980px;
     }
 
     .modal__close {
         position: absolute;
         right: 0;
-        top: 30px;
-        padding-right: 40px;
+        top: 60px;
+        padding-right: 60px;
         font-size: 40px;
     }
 }
+
+@media screen and (max-width: 414px) {    
+    .modal-image {
+        width: 300px;
+        height: 300px;
+    }   
+
+    .modal__description {
+        max-height: 150px;
+    }
+
+    
+    .modal-content {
+        padding: 180px 80px;
+    }
+
+
+    .modal__close {
+        padding-top: 100px;
+        /* top: 80px; */
+
+
+        /* right: 0; */
+        /* top: 80px; */
+        /* padding-right: 90px; */
+    }
+}
+
+
 
