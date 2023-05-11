@@ -12,10 +12,12 @@
     display: inline-block;   
     border: solid 2px var(--black-color);
     padding: 10px 15px;
+    color: white;
 }
 
-.filters__list-item:hover {
-    background-color: var(--white-color-darker);
+.dark-theme .filters__list-item:hover {
+    background-color: white;
+    color: black;
 }
 .filters__link {
     font-size: 20px;

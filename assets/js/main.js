@@ -843,7 +843,26 @@ contactForm.addEventListener('submit', sendEmail)
 
 
 
+// change theme
+const themeBtn = document.getElementById('theme-icon')
+const headerLogo = document.querySelector('.header-img')
 
+themeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-theme')
+    if(themeBtn.classList.contains('ri-moon-line')) {
+        themeBtn.classList.remove('ri-moon-line')
+        themeBtn.classList.add('ri-sun-line')
+    } else {
+        themeBtn.classList.remove('ri-sun-line')
+        themeBtn.classList.add('ri-moon-line')
+    }
+
+    if(headerLogo.src === 'assets/icons/header-logo.png') {
+        headerLogo.src = 'assets/icons/header-logo-white.png'
+    } else {
+        headerLogo.src = 'assets/icons/header-logo-white.png'
+    }
+})
 
 
 

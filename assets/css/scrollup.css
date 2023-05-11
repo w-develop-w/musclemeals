@@ -7,7 +7,7 @@
     padding: .35rem;
     padding: 15px;
     border-radius: 50%;
-    background-color: var(--white-color);
+    background-color: white;
     box-shadow: 0 2px 8px rgba(0,0,0,.2);
     font-size: 1.25rem;
     /* z-index: 100; */

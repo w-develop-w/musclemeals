@@ -17,8 +17,14 @@
     width: 50px;
 }
 
+.header-logo-white img {
+    height: 50px;
+    width: 50px;
+}
+
 #header-title {
     font-size: 25px;
+    color: var(--black-color);
 }
 
 .header__buttons {
