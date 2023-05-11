@@ -802,8 +802,8 @@ buyBtn.addEventListener('click', (event) => {
 
 closeModalOrder.addEventListener('click', (event) => {
     event.preventDefault()
-    modalOrder.classList.remove('order-active')
     body.style.overflow = 'auto'
+    modalOrder.classList.remove('order-active')
 })
 
 
