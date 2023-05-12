@@ -644,7 +644,7 @@ allProductsItem.forEach(item => {
 
     let imageUrl = item.querySelector('img').src
     modalImage.src = imageUrl
-    let title = item.querySelector('.product-title').textContent.replace(/<br>/g, ' ')
+    let title = item.querySelector('.product-title').textContent.replace(/<br>/g, '')
     modalTitle.textContent = title
 
 

@@ -55,7 +55,7 @@
     max-width: 250px;
     text-align: left;
     line-height: 35px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .modal__flex {
@@ -87,7 +87,7 @@
     overflow: auto;
     line-height: 30px;
     max-height: 250px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .modal__price__buy {
@@ -131,7 +131,7 @@
 @media screen and (max-width: 414px) {    
     .modal-image {
         width: 300px;
-        height: 300px;
+        height: 280px;
     }   
 
     .modal__description {
