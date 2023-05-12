@@ -1,6 +1,9 @@
 .mobile__menu-active {
 	transform: translateX(-500px);
 }
+.mobile__menu-active .body{
+    overflow: hidden;
+}
 
 .mobile__menu {
     position: fixed;

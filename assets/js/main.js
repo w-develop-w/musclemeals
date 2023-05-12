@@ -59,6 +59,7 @@ burgerBtn.addEventListener('click', (event) => {
     scrollUpBtn.classList.add('scrollup-hide')
     event.preventDefault();
     mobileMenu.classList.add('mobile__menu-active')
+    body.style.overflow = 'hidden'
     if(headerTitle) {
         headerTitle.classList.add('header__buttons-hide')
     }
@@ -71,6 +72,7 @@ burgerBtn.addEventListener('click', (event) => {
 closeMenuBtn.addEventListener('click', () => {
     scrollUpBtn.classList.remove('scrollup-hide')
     mobileMenu.classList.remove('mobile__menu-active')
+    body.style.overflow = 'auto'
     // for hide or show headerTitle
     let screenWidth = window.screen.width;
     if(screenWidth < 380) {
@@ -88,6 +90,7 @@ closeMenuBtn.addEventListener('click', () => {
 mobileMenuList.forEach(e => e.addEventListener('click', () => {
     scrollUpBtn.classList.remove('scrollup-hide')
     mobileMenu.classList.remove('mobile__menu-active')
+    body.style.overflow = 'auto'
     // for hide or show headerTitle
     let screenWidth = window.screen.width;
     if(screenWidth < 380) {
