@@ -155,10 +155,10 @@
     }
 }
 
-@media screen and (max-width: 350px) {    
+@media screen and (max-width: 370px) {    
     .modal-image {
-        width: 230px;
-        height: 220px;
+        width: 250px;
+        height: 210px;
         padding-left: 40px;
     } 
     
