@@ -10,17 +10,17 @@
     align-items: center;
     background-color: var(--white-color-darker);
 }
-
-.ri-instagram-fill {
-    font-size: 40px;
+.dark-theme .developer__content {
+    background-color: #111;
 }
 
-.ri-telegram-fill {
-    font-size: 40px;
+.developer-title {
+    color: var(--black-color);
 }
 
-.ri-github-fill {
+.developer__icon {
     font-size: 40px;
+    color: var(--black-color);
 }
 
 .developer__contact {
@@ -32,4 +32,8 @@
 
 .developer__icon:hover {
     color: white;
+}
+
+.dark-theme .developer__icon:hover {
+    color: #717070;
 }

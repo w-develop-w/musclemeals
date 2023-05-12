@@ -3,7 +3,8 @@
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.05);
-    backdrop-filter: blur(7px);
+    /* backdrop-filter: blur(7px); */
+    background-color: var(--white-color);
     z-index: 4;
 }
   

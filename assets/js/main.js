@@ -56,7 +56,6 @@ const header = document.getElementById('header')
 
 // if tab on burgerBtn then  mobile menu open 
 burgerBtn.addEventListener('click', (event) => {
-    // header.classList.add('header-blur')
     scrollUpBtn.classList.add('scrollup-hide')
     event.preventDefault();
     mobileMenu.classList.add('mobile__menu-active')
@@ -847,8 +846,11 @@ contactForm.addEventListener('submit', sendEmail)
 const themeBtn = document.getElementById('theme-icon')
 const headerLogo = document.querySelector('.header-img')
 
-themeBtn.addEventListener('click', () => {
-    body.classList.toggle('dark-theme')
+themeBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+    body.classList.toggle('dark-theme')    
+    
+    // for change moon on sun
     if(themeBtn.classList.contains('ri-moon-line')) {
         themeBtn.classList.remove('ri-moon-line')
         themeBtn.classList.add('ri-sun-line')
@@ -857,14 +859,24 @@ themeBtn.addEventListener('click', () => {
         themeBtn.classList.add('ri-moon-line')
     }
 
-    if(headerLogo.src === 'assets/icons/header-logo.png') {
+    // for change black logo on e=white logo 
+    if(headerLogo.src.includes('assets/icons/header-logo.png')) {
         headerLogo.src = 'assets/icons/header-logo-white.png'
-    } else {
-        headerLogo.src = 'assets/icons/header-logo-white.png'
-    }
+    } 
+    else {
+        headerLogo.src = 'assets/icons/header-logo.png'
+    }    
 })
 
 
+// for tab on image in modal 
+const imagesModal = document.querySelectorAll('.product-image')
+
+imagesModal.forEach(image => {
+    image.addEventListener('click', (event)=> {
+        event.preventDefault()
+    })
+})
 
 
 

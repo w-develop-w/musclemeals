@@ -15,10 +15,18 @@
     color: white;
 }
 
+.filters__list-item:hover {
+    background-color: var(--white-color-darker);    
+}
+
 .dark-theme .filters__list-item:hover {
-    background-color: white;
+    background-color: var(--white-color-darker);    
+}
+
+.dark-theme .filters__list-item:hover a {
     color: black;
 }
+
 .filters__link {
     font-size: 20px;
 }
