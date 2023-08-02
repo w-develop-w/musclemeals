@@ -1,0 +1,26 @@
+#+title: 💪muscle-meals
+
+#+begin_html
+<div align="center">
+		<img src="./assets/img/screenshot.jpg">
+</div>
+
+
+#+end_html
+
+#+begin_center
+muscle-meals is a site in which users can order protein, creatine or BCA
+#+end_center
+
+** Installation⤵️
+*** 1. Clone this repository:
+#+begin_src bash
+  git clone https://github.com/w-develop-w/musclemeals.git
+#+end_src
+
+*** 2. Install the Live Server extension
+
+
+*** 3. Right click on index.html and select 'Open with Live Server'
+
+The project will run and you can test this site🔥
